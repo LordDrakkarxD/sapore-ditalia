@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,10 +9,20 @@ import {
 } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 import DItaliaLogo from "../../assets/icon.webp";
+import { UserContext } from "../../contexts/user";
+
+import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 import "./navigation.scss";
 
 const Navigation = () => {
+  const { currentUser, setCurrentUser } = useContext(UserContext);
+
+  const signOutHandler = async () => {
+    await signOutUser();
+    setCurrentUser(null);
+  };
+
   return (
     <Fragment>
       <div className="navigation">
@@ -44,9 +54,15 @@ const Navigation = () => {
           <Link className="nav-link" to="/contact">
             CONTATO
           </Link>
-          <Link className="nav-link" to="/auth">
-            <FontAwesomeIcon icon={solid("user")} />
-          </Link>
+          {currentUser ? (
+            <span className="nav-link logged" onClick={signOutHandler}>
+              <FontAwesomeIcon icon={solid("user")} />
+            </span>
+          ) : (
+            <Link className="nav-link" to="/auth">
+              <FontAwesomeIcon icon={solid("user")} />
+            </Link>
+          )}
           <Link className="nav-link" to="/shopping-cart">
             <FontAwesomeIcon icon={solid("cart-shopping")} />
           </Link>
