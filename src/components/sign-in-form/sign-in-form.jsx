@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Outlet, Link } from "react-router-dom";
+
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 
@@ -63,8 +65,8 @@ const SignInForm = () => {
 
   return (
     <div className="sign-in-container">
-      <h2>Already have an account?</h2>
-      <span>Sign in with your email and password</span>
+      <h2>Ja possui uma conta?</h2>
+      <span>Entre com seu email e senha</span>
       <form onSubmit={handleSubmit}>
         <FormInput
           label="Email"
@@ -75,7 +77,7 @@ const SignInForm = () => {
           value={email}
         />
         <FormInput
-          label="Password"
+          label="Senha"
           type="password"
           required
           onChange={handleChange}
@@ -83,12 +85,16 @@ const SignInForm = () => {
           value={password}
         />
         <div className="buttons-container">
-          <Button type="submit">Sign In</Button>
+          <Button type="submit">Entrar</Button>
           <Button type="button" buttonType="google" onClick={signInWithGoogle}>
-            Google Sign In
+            Entrar com Google
           </Button>
         </div>
       </form>
+      <div className="sign-up-button">
+        <span>Nao tem uma conta?</span>
+        <Link to="/signup">Cadastre-se aqui</Link>
+      </div>
     </div>
   );
 };
