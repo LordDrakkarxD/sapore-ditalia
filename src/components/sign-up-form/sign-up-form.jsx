@@ -1,19 +1,28 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 
-import FormInput from "../../components/form-input/form-input";
-import Button from "../../components/button/button";
+import cep from "cep-promise";
+
+import FormInput from "../form-input/form-input";
+import Button from "../button/button";
 
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 
-import { UserContext } from "../../contexts/user";
-
 import "./sign-up-form.scss";
 
 const defaultFormFields = {
   displayName: "",
+  fullName: "",
+  cpf: "",
+  street: "",
+  number: "",
+  zip: "",
+  district: "",
+  city: "",
+  state: "",
+  complement: "",
   email: "",
   password: "",
   confirmPassword: "",
@@ -21,9 +30,27 @@ const defaultFormFields = {
 
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const { displayName, email, password, confirmPassword } = formFields;
+  const [isReadonly, setIsReadonly] = useState(false);
 
-  const { setCurrentUser } = useContext(UserContext);
+  const {
+    displayName,
+    fullName,
+    cpf,
+    street,
+    number,
+    zip,
+    district,
+    city,
+    state,
+    complement,
+    email,
+    password,
+    confirmPassword,
+  } = formFields;
+
+  const url = () => {
+    return `http://viacep.com.br/ws/${zip}/json/`;
+  };
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -42,29 +69,71 @@ const SignUpForm = () => {
         email,
         password
       );
-      setCurrentUser(user);
 
-      await createUserDocumentFromAuth(user, { displayName });
+      await createUserDocumentFromAuth(user, {
+        displayName,
+        fullName,
+        cpf,
+        address: {
+          street,
+          number,
+          zip,
+          district,
+          city,
+          state,
+          complement,
+        },
+      });
       resetFormFields();
-    } catch (err) {
-      if (err.code === "auth/email-already-in-use") {
+    } catch (error) {
+      if (error.code === "auth/email-already-in-use") {
         alert("Cannot create user, email already in use");
       } else {
-        console.log("user creation encountered an error", err);
+        console.log("user creation encountered an error", error);
       }
+    }
+  };
+
+  const buscaCEP = async (event) => {
+    if (zip.length < 8) {
+      return;
+    } else {
+      const addressInfo = await fetch(url(), { mode: "cors" })
+        .then((res) => res.json())
+        .then((data) => {
+          return data;
+        })
+        .catch((err) => console.log(err));
+
+      const { bairro, cep, logradouro, localidade, uf } = addressInfo;
+
+      setFormFields({
+        ...formFields,
+        street: logradouro,
+        district: bairro,
+        city: localidade,
+        state: uf,
+      });
+      setIsReadonly((prevState) => !prevState);
+    }
+  };
+
+  const cpfIsValid = () => {
+    if (cpf.length !== 11) {
+      alert("CPF deve ter 11 digitos");
+      setFormFields({ ...formFields, cpf: "" });
     }
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-
     setFormFields({ ...formFields, [name]: value });
   };
 
   return (
     <div className="sign-up-container">
       <h2>Nao tem uma conta?</h2>
-      <span>Cadastre-se com seu email e senha</span>
+      <span>Preencha seus dados pessoais</span>
       <form onSubmit={handleSubmit}>
         <FormInput
           label="Nickname"
@@ -73,6 +142,86 @@ const SignUpForm = () => {
           onChange={handleChange}
           name="displayName"
           value={displayName}
+        />
+        <FormInput
+          label="Nome Completo"
+          type="text"
+          required
+          onChange={handleChange}
+          name="fullName"
+          value={fullName}
+        />
+        <FormInput
+          label="CPF"
+          type="number"
+          maxLength={11}
+          required
+          onChange={handleChange}
+          onBlur={cpfIsValid}
+          name="cpf"
+          value={cpf}
+        />
+        <FormInput
+          label="CEP"
+          type="number"
+          maxLength={8}
+          required
+          onChange={handleChange}
+          onBlur={buscaCEP}
+          name="zip"
+          value={zip}
+        />
+        <FormInput
+          label="Endereco"
+          type="text"
+          readOnly={isReadonly}
+          required
+          onChange={handleChange}
+          name="street"
+          value={street}
+        />
+        <FormInput
+          label="Numero"
+          type="text"
+          required
+          onChange={handleChange}
+          name="number"
+          value={number}
+        />
+        <FormInput
+          label="Bairro"
+          type="text"
+          readOnly={isReadonly}
+          required
+          onChange={handleChange}
+          name="district"
+          value={district}
+        />
+        <FormInput
+          label="Cidade"
+          type="text"
+          readOnly={isReadonly}
+          required
+          onChange={handleChange}
+          name="city"
+          value={city}
+        />
+        <FormInput
+          label="UF"
+          type="text"
+          readOnly={isReadonly}
+          required
+          onChange={handleChange}
+          name="state"
+          value={state}
+        />
+        <FormInput
+          label="Complemento"
+          type="text"
+          required
+          onChange={handleChange}
+          name="complement"
+          value={complement}
         />
         <FormInput
           label="Email"
@@ -98,7 +247,7 @@ const SignUpForm = () => {
           name="confirmPassword"
           value={confirmPassword}
         />
-        <Button type="submit">Cadastrar</Button>
+        <Button type="submit">Sign Up</Button>
       </form>
     </div>
   );

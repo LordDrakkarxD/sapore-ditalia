@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,9 +8,13 @@ import {
   brands,
 } from "@fortawesome/fontawesome-svg-core/import.macro";
 
+import { UserContext } from "../../contexts/user";
+
 import "./footer.scss";
 
 const Footer = () => {
+  const { currentUser } = useContext(UserContext);
+
   return (
     <div className="footer">
       <div className="footer-container">
@@ -62,9 +66,12 @@ const Footer = () => {
             <div>
               <div className="nav-link">
                 <h2>Dúvidas</h2>
-                <Link className="link" to="/account/orders">
-                  Meus Pedidos
-                </Link>
+                {currentUser && (
+                  <Link className="link" to="/account/orders">
+                    Meus Pedidos
+                  </Link>
+                )}
+
                 <Link className="link" to="/como-comprar">
                   Como Comprar
                 </Link>
