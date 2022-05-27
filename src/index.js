@@ -4,6 +4,12 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import { UserProvider } from "./contexts/user";
+import { ProductsProvider } from "./contexts/products";
+import { CartProvider } from "./contexts/cart";
+import { WindowPopUpBuyProvider } from "./contexts/window-popup-buy";
+import { WindowPopupProvider } from "./contexts/window-popup";
+
+import { ChakraProvider } from "@chakra-ui/react";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -15,7 +21,17 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <ProductsProvider>
+          <CartProvider>
+            <WindowPopUpBuyProvider>
+              <WindowPopupProvider>
+                <ChakraProvider>
+                  <App />
+                </ChakraProvider>
+              </WindowPopupProvider>
+            </WindowPopUpBuyProvider>
+          </CartProvider>
+        </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

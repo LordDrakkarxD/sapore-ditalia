@@ -10,6 +10,28 @@ import {
 
 import { UserContext } from "../../contexts/user";
 
+import Logo from "../../assets/logo.png";
+
+import BoletoIcon from "../../assets/boleto.svg";
+
+import EloIcon from "../../assets/elo.svg";
+
+import VisaIcon from "../../assets/visa.svg";
+
+import MasterCardIcon from "../../assets/mastercard.svg";
+
+import HyperCardIcon from "../../assets/hipercard-v2.svg";
+
+import AmexIcon from "../../assets/amex-american-express-v2.svg";
+
+import DinersIcon from "../../assets/diners-club-international-v2.svg";
+
+import PIXIcon from "../../assets/pix-106.svg";
+
+import EncryptIcon from "../../assets/let-s-encrypt-seeklogo.com.svg";
+
+import PagarMeIcon from "../../assets/pagarme.svg";
+
 import "./footer.scss";
 
 const Footer = () => {
@@ -20,18 +42,12 @@ const Footer = () => {
       <div className="footer-container">
         <div className="company-container">
           <div className="company-details">
-            <div className="logo">
+            <div className="footer-img">
               <Link to="/">
-                <img
-                  src="https://assets.betalabs.net/production/clubemassa/images/stores/1/logo-menor.png"
-                  alt="Clube Massa"
-                />
+                <img src={Logo} className="footer-logo" alt="Clube Massa" />
               </Link>
             </div>
-            <p>
-              Rua Rui Barbosa, 867, Vila Carmem, Presidente Venceslau SP CEP
-              19400-000
-            </p>
+            <p>Rua Turiassu, 340, Perdizes, Sao Paulo/SP CEP 05005-000</p>
           </div>
           <div className="company-details">
             <p>CATHERINE GRAZIELLE FRANKE ME,</p>
@@ -90,8 +106,8 @@ const Footer = () => {
           <div className="institutional-links">
             <div className="nav-link">
               <h2>Atendimento</h2>
-              <Link className="link" to="mailto:comercial@massadamamma.com.br ">
-                comercial@massadamamma.com.br{" "}
+              <Link className="link" to="mailto:contato@saporediitalia.com.br">
+                contato@saporediitalia.com.br{" "}
               </Link>
             </div>
           </div>
@@ -126,19 +142,45 @@ const Footer = () => {
           <div className="institutional-links">
             <div className="nav-link">
               <h2>Formas de Pagamento</h2>
-              <img
+              <div className="cards-nav-link">
+                <img src={VisaIcon} className="card-nav-link" alt="Boleto" />
+                <img
+                  src={MasterCardIcon}
+                  className="card-nav-link"
+                  alt="Boleto"
+                />
+                <img src={AmexIcon} className="card-nav-link" alt="Boleto" />
+                <img src={DinersIcon} className="card-nav-link" alt="Boleto" />
+                <img
+                  src={HyperCardIcon}
+                  className="card-nav-link"
+                  alt="Boleto"
+                />
+                <img src={EloIcon} className="card-nav-link" alt="Boleto" />
+                <img src={BoletoIcon} className="card-nav-link" alt="Boleto" />
+                <img src={PIXIcon} className="card-nav-link" alt="Boleto" />
+              </div>
+              {/*<img
                 src="https://assets.betalabs.net/production/clubemassa/images/stores/1/bandeiras.jpg"
                 alt="bandeiras"
-              />
+                />*/}
             </div>
           </div>
           <div className="institutional-links">
             <div className="nav-link">
               <h2>Segurança</h2>
-              <img
-                src="https://assets.betalabs.net/production/clubemassa/images/stores/1/ssl.jpg"
-                alt="security"
-              />
+              <div className="cards-nav-link">
+                <img
+                  src={PagarMeIcon}
+                  className="card-nav-link"
+                  alt="security"
+                />
+                <img
+                  src={EncryptIcon}
+                  className="card-nav-link"
+                  alt="security"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,149 @@
+.radio-input-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  padding: 16px 40px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 6px 0px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .radio-input-details {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+
+      .radio-input-details-title {
+        font-size: 1.6rem;
+        line-height: 1.27;
+        color: #3f3e3e;
+        font-weight: 100;
+      }
+
+      .radio-input-details-price {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #ea1d2c;
+      }
+    }
+
+    .radio-input-button {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      /* Hide the browser's default radio button */
+      .checkmark-input {
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      /* Create a custom radio button */
+      .checkmark {
+        height: 24px;
+        width: 24px;
+        background-color: #eee;
+        border-radius: 50%;
+      }
+
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Style the indicator (dot/circle) */
+      .checkmark:after {
+        position: relative;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        width: 12px;
+        height: 12px;
+
+        border-radius: 50%;
+        background: white;
+      }
+
+      /* On mouse-over, add a grey background color */
+      &:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+
+      /* When the radio button is checked, add a blue background */
+      input:checked ~ .checkmark {
+        background-color: #2196f3;
+      }
+
+      /* Show the indicator (dot/circle) when checked */
+      input:checked ~ .checkmark:after {
+        display: block;
+      }
+    }
+  }
+}
+
+// .option-card {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 16px 40px;
+
+//   .option-card-details {
+//     display: flex;
+//     flex-direction: column;
+//     row-gap: 10px;
+
+//     .option-card-title {
+//       font-size: 1.4rem;
+//       line-height: 1.27;
+//       color: #3f3e3e;
+//       font-weight: 100;
+//     }
+
+//     .option-card-price {
+//       font-size: 1.4rem;
+//       font-weight: 600;
+//       color: #ea1d2c;
+//     }
+//   }
+
+//   // /* Hide the browser's default radio button */
+//   // input {
+//   //   opacity: 0;
+//   //   cursor: pointer;
+//   // }
+
+//   // /* Create a custom radio button */
+//   // .checkmark {
+//   //   top: 0;
+//   //   left: 0;
+//   //   height: 24px;
+//   //   width: 24px;
+//   //   background-color: #eee;
+//   //   border-radius: 50%;
+//   // }
+
+//   // /* On mouse-over, add a grey background color */
+//   // &:hover input ~ .checkmark {
+//   //   background-color: #ccc;
+//   // }
+
+//   // /* When the radio button is checked, add a blue background */
+//   // input:checked ~ .checkmark {
+//   //   background-color: #2196f3;
+//   // }
+// }

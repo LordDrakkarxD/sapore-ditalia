@@ -28,6 +28,8 @@ Default: 1
 
 --- 05 SHADOWS
 
+#dcdcdc #efefef
+
 --- 06 BORDER-RADIUS
 
 --- 07 WHITESPACE
@@ -43,15 +45,15 @@ Default: 1
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Inter", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
-}
-
-div {
-  display: block;
 }
 
 a {
