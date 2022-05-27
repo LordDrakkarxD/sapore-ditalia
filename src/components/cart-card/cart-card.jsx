@@ -10,7 +10,7 @@ const CartCard = ({ cartItem }) => {
   const { clearItemFromCart } = useContext(CartContext);
   const { setWindowPopup } = useContext(WindowPopupContext);
   const { setProductSelected } = useContext(WindowPopUpBuyContext);
-  const { name, quantity, options, totalProduct, observation } = cartItem;
+  const { title, quantity, options, totalProduct, observation } = cartItem;
 
   console.log(totalProduct);
 
@@ -28,7 +28,7 @@ const CartCard = ({ cartItem }) => {
     <div className="cart-card-container">
       <div className="cart-card-header">
         <div className="cart-card-title">
-          {quantity}x {name}
+          {quantity}x {title}
         </div>
         <div className="cart-card-price">R$ {totalProduct.toFixed(2)}</div>
       </div>

@@ -2,14 +2,10 @@ import { useNavigate } from "react-router-dom";
 
 import { useContext } from "react";
 
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  regular,
-  brands,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 import { CartContext } from "../../contexts/cart";
 
@@ -19,7 +15,7 @@ import "./cart-dropdown.scss";
 
 const CartDropdown = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
-  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
+  const { setIsCartOpen } = useContext(CartContext);
   const navigate = useNavigate();
 
   const categories = cartItems.map((cartItem) => cartItem.section);
