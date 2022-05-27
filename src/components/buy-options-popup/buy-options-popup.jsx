@@ -19,11 +19,11 @@ const BuyOptions = ({ trigger }) => {
   const { productSelected, itemsTotal, setItemsTotal, formData, formTotal } =
     useContext(WindowPopUpBuyContext);
   const { setWindowPopup } = useContext(WindowPopupContext);
-  const { addItemToCart, cartTotal } = useContext(CartContext);
+  const { addItemToCart } = useContext(CartContext);
   const [characterCount, setCharacterCount] = useState(0);
   const [observation, setObservation] = useState("");
 
-  const { name, price, imageUrl, description, servings, options } =
+  const { title, price, imageUrl, description, servings, options } =
     productSelected;
 
   const toggleCharacterCount = (e) => {
@@ -80,7 +80,7 @@ const BuyOptions = ({ trigger }) => {
             </div>
             <div className="dish-content-header">
               <div className="dish-content-nav-header">
-                <div className="dish-content-nav-header-title">{name}</div>
+                <div className="dish-content-nav-header-title">{title}</div>
                 <button
                   className="dish-content-nav-header-btn"
                   onClick={toggleWindowPopup}

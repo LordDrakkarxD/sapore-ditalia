@@ -1,11 +1,9 @@
 const SHOP_DATA = [
   {
-    id: 1,
-    section: "Massas",
+    title: "Massas",
     items: [
       {
-        id: 1,
-        name: "Massa 1",
+        title: "Massa 1",
         imageUrl: "https://i.imgur.com/cd3fc0G.jpg",
         price: 25,
         servings: 1,
@@ -34,8 +32,7 @@ const SHOP_DATA = [
         ],
       },
       {
-        id: 2,
-        name: "Massa 2",
+        title: "Massa 2",
         imageUrl: "https://i.imgur.com/wMx2a7O.jpg",
         price: 18,
         servings: 2,
@@ -64,8 +61,7 @@ const SHOP_DATA = [
         ],
       },
       {
-        id: 3,
-        name: "Massa 3",
+        title: "Massa 3",
         imageUrl: "https://i.imgur.com/EKS2eGZ.jpg",
         price: 35,
         servings: 4,
@@ -73,8 +69,7 @@ const SHOP_DATA = [
         options: [],
       },
       {
-        id: 4,
-        name: "Massa 4",
+        title: "Massa 4",
         imageUrl: "https://i.imgur.com/2CU0ViU.jpg",
         price: 25,
         servings: 5,
@@ -82,8 +77,7 @@ const SHOP_DATA = [
         options: [],
       },
       {
-        id: 5,
-        name: "Massa 5",
+        title: "Massa 5",
         imageUrl: "https://i.imgur.com/GWL2sDT.jpg",
         price: 18,
         servings: 1,
@@ -91,8 +85,7 @@ const SHOP_DATA = [
         options: [],
       },
       {
-        id: 6,
-        name: "Massa 6",
+        title: "Massa 6",
         imageUrl: "https://i.imgur.com/5ibIQDk.jpg",
         price: 14,
         servings: 1,
@@ -100,8 +93,7 @@ const SHOP_DATA = [
         options: [],
       },
       {
-        id: 7,
-        name: "Massa 7",
+        title: "Massa 7",
         imageUrl: "https://i.imgur.com/GSryRl9.jpg",
         price: 18,
         servings: 1,
@@ -109,8 +101,7 @@ const SHOP_DATA = [
         options: [],
       },
       {
-        id: 8,
-        name: "Massa 8",
+        title: "Massa 8",
         imageUrl: "https://i.imgur.com/thIbLgh.jpg",
         price: 14,
         servings: 1,
@@ -118,8 +109,7 @@ const SHOP_DATA = [
         options: [],
       },
       {
-        id: 9,
-        name: "Massa 9",
+        title: "Massa 9",
         imageUrl: "https://i.imgur.com/aVjUZ1j.jpg",
         price: 16,
         servings: 1,
@@ -129,28 +119,24 @@ const SHOP_DATA = [
     ],
   },
   {
-    id: 2,
-    section: "Bebidas",
+    title: "Bebidas",
     items: [
       {
-        id: 10,
-        name: "Refrigerante Lata",
+        title: "Refrigerante Lata",
         imageUrl: "https://i.imgur.com/OJvK41Z.jpg",
         price: 5,
         description: "Lata 350ml",
         options: ["Coca-Cola", "Fanta", "Guarana"],
       },
       {
-        id: 11,
-        name: "Refrigerante 1L",
+        title: "Refrigerante 1L",
         imageUrl: "https://i.imgur.com/OJvK41Z.jpg",
         price: 18,
         description: "1 Litro",
         options: ["Coca-Cola", "Fanta", "Guarana"],
       },
       {
-        id: 12,
-        name: "Refrigerante 2L",
+        title: "Refrigerante 2L",
         imageUrl: "https://i.imgur.com/OJvK41Z.jpg",
         price: 9.9,
         description: "2 Litros",

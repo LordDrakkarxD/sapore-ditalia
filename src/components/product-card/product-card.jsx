@@ -9,11 +9,9 @@ import "./product-card.scss";
 
 const ProductCard = ({ item, section }) => {
   const { isWindowPopup, setWindowPopup } = useContext(WindowPopupContext);
-  const { productSelected, setProductSelected } = useContext(
-    WindowPopUpBuyContext
-  );
+  const { setProductSelected } = useContext(WindowPopUpBuyContext);
 
-  const { name, price, imageUrl, description, servings } = item;
+  const { title, price, imageUrl, description, servings } = item;
 
   const toggleWindowPopup = () => {
     setWindowPopup(true);
@@ -29,7 +27,7 @@ const ProductCard = ({ item, section }) => {
       <div className="product-card-container" onClick={toggleWindowPopup}>
         <div className="product-card-footer">
           <div className="product-card-details">
-            <span className="product-card-name">{name}</span>
+            <span className="product-card-name">{title}</span>
             <span className="product-card-description">{description}</span>
             <span className="product-card-servings">
               {servings &&
@@ -41,7 +39,7 @@ const ProductCard = ({ item, section }) => {
           <span className="product-card-price">R$ {price.toFixed(2)}</span>
         </div>
         <div className="product-card-image">
-          <img className="product-image" src={imageUrl} alt={`${name}`} />
+          <img className="product-image" src={imageUrl} alt={`${title}`} />
         </div>
       </div>
       <BuyOptionsPopup trigger={isWindowPopup} />
