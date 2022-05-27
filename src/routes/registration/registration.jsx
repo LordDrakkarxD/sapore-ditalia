@@ -1,5 +1,3 @@
-import { Outlet, Link } from "react-router-dom";
-
 import SignUpForm from "../../components/sign-up-form/sign-up-form";
 
 import "./registration.scss";

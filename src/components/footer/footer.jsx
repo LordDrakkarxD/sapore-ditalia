@@ -1,12 +1,8 @@
-import { Fragment, useContext } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  regular,
-  brands,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
+import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 import { UserContext } from "../../contexts/user";
 

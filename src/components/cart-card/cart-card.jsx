@@ -7,23 +7,12 @@ import { WindowPopUpBuyContext } from "../../contexts/window-popup-buy";
 import "./cart-card.scss";
 
 const CartCard = ({ cartItem }) => {
-  const { clearItemFromCart, cartTotal } = useContext(CartContext);
+  const { clearItemFromCart } = useContext(CartContext);
   const { setWindowPopup } = useContext(WindowPopupContext);
   const { setProductSelected } = useContext(WindowPopUpBuyContext);
-  const {
-    imageUrl,
-    price,
-    name,
-    quantity,
-    options,
-    description,
-    totalProduct,
-    observation,
-  } = cartItem;
+  const { name, quantity, options, totalProduct, observation } = cartItem;
 
   console.log(totalProduct);
-
-  const obs = "Quero Milho";
 
   const toggleEditItem = () => {
     setProductSelected(cartItem);

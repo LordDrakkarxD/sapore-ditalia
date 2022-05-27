@@ -6,15 +6,14 @@ import CartIcon from "../../components/cart-icon/cart-icon";
 import UserIcon from "../../components/user-icon/user-icon";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown";
 
-import { UserContext } from "../../contexts/user";
+// import { UserContext } from "../../contexts/user";
 import { CartContext } from "../../contexts/cart";
 
-import { signOutUser } from "../../utils/firebase/firebase.utils";
+// import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 import "./navigation.scss";
 
 const Navigation = () => {
-  const { currentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(CartContext);
 
   const linksList = {};
