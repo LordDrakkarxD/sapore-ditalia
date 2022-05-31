@@ -1,4 +1,4 @@
-.section-card-container {
+.category-card-container {
   display: flex;
   flex-direction: column;
 
@@ -6,7 +6,7 @@
 
   row-gap: 40px;
 
-  .section-card-title {
+  .category-card-title {
     font-size: 2.4rem;
     letter-spacing: -1px;
     //padding: 40px 0 20px;
@@ -18,7 +18,7 @@
     width: 100%;
   }
 
-  .section-card-sections {
+  .category-card-sections {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 200px;

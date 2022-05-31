@@ -12,8 +12,6 @@ const CartCard = ({ cartItem }) => {
   const { setProductSelected } = useContext(WindowPopUpBuyContext);
   const { title, quantity, options, totalProduct, observation } = cartItem;
 
-  console.log(totalProduct);
-
   const toggleEditItem = () => {
     setProductSelected(cartItem);
     setWindowPopup(true);
@@ -35,7 +33,7 @@ const CartCard = ({ cartItem }) => {
       {options ? (
         <div className="cart-card-options">
           {Object.values(options).map((option) => (
-            <div key={option.name} className="cart-card-option">
+            <div key={option.id} className="cart-card-option">
               {option.id}: {option.name}
             </div>
           ))}
@@ -43,7 +41,7 @@ const CartCard = ({ cartItem }) => {
       ) : (
         ""
       )}
-      <div className="cart-card-obs">Obs.: {observation}</div>
+      {observation && <div className="cart-card-obs">Obs.: {observation}</div>}
       <div className="cart-card-buttons">
         <button className="cart-card-edit" onClick={toggleEditItem}>
           <span>Editar</span>

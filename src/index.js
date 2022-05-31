@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import { UserProvider } from "./contexts/user";
-import { ProductsProvider } from "./contexts/products";
+import { CategoriesProvider } from "./contexts/categories";
 import { CartProvider } from "./contexts/cart";
 import { WindowPopUpBuyProvider } from "./contexts/window-popup-buy";
 import { WindowPopupProvider } from "./contexts/window-popup";
@@ -21,7 +21,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <ProductsProvider>
+        <CategoriesProvider>
           <CartProvider>
             <WindowPopUpBuyProvider>
               <WindowPopupProvider>
@@ -31,7 +31,7 @@ root.render(
               </WindowPopupProvider>
             </WindowPopUpBuyProvider>
           </CartProvider>
-        </ProductsProvider>
+        </CategoriesProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

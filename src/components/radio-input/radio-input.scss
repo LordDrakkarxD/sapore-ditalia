@@ -3,7 +3,7 @@
   flex-direction: column;
   row-gap: 10px;
 
-  padding: 16px 40px;
+  //padding: 16px 40px;
 
   .container {
     display: flex;
@@ -11,6 +11,10 @@
     justify-content: space-between;
 
     padding: 6px 0px;
+
+    padding: 16px 40px;
+
+    border-bottom: 1px solid #f7f7f7;
 
     -webkit-user-select: none;
     -moz-user-select: none;

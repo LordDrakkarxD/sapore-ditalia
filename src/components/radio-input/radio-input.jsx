@@ -4,23 +4,19 @@ import { useState, useContext } from "react";
 
 import { WindowPopUpBuyContext } from "../../contexts/window-popup-buy";
 
-const RadioInput = ({ option }) => {
-  const { section, items } = option;
+const RadioInput = ({ items }) => {
   const [checked, setChecked] = useState(true);
 
   const { addItemToForm } = useContext(WindowPopUpBuyContext);
 
   const toggleChecked = (e) => {
-    console.log(e.target.checked === true);
     if (checked) {
       e.target.parentElement.classList.add("--checked");
     } else {
       e.target.parentElement.classList.remove("--checked");
     }
 
-    //child.parentElement.classList.add("--checked");
     setChecked(!checked);
-    console.log(checked);
   };
 
   const handleChange = (e) => {
@@ -48,7 +44,7 @@ const RadioInput = ({ option }) => {
               type="radio"
               name={item.id}
               value={JSON.stringify(item)}
-              onClick={toggleChecked}
+              onChange={toggleChecked}
             />
             <span className="checkmark" />
           </div>
@@ -59,22 +55,3 @@ const RadioInput = ({ option }) => {
 };
 
 export default RadioInput;
-
-// <label key={item.name} className="option-card">
-//   <div className="option-card-details">
-//     <span className="option-card-title">{item.name}</span>
-//     {item.price && item.price > 0 ? (
-//       <span className="option-card-price">+ R$ {item.price}</span>
-//     ) : (
-//       ""
-//     )}
-//   </div>
-//   <input
-//     type="radio"
-//     name={`radio ${section}`}
-//     value={JSON.stringify(item)}
-//     defaultChecked={checked}
-//     onChange={handleChange}
-//   />
-//   <span className="checkmark"></span>
-// </label>

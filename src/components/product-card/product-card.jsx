@@ -7,16 +7,16 @@ import BuyOptionsPopup from "../buy-options-popup/buy-options-popup";
 
 import "./product-card.scss";
 
-const ProductCard = ({ item, section }) => {
+const ProductCard = ({ product, section }) => {
   const { isWindowPopup, setWindowPopup } = useContext(WindowPopupContext);
   const { setProductSelected } = useContext(WindowPopUpBuyContext);
 
-  const { title, price, imageUrl, description, servings } = item;
+  const { title, price, imageUrl, description, servings } = product;
 
   const toggleWindowPopup = () => {
     setWindowPopup(true);
     setProductSelected({
-      ...item,
+      ...product,
       quantity: 1,
       section,
     });

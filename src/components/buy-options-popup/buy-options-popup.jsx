@@ -1,11 +1,7 @@
 import { useContext, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  regular,
-  brands,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 import { WindowPopUpBuyContext } from "../../contexts/window-popup-buy";
 import { WindowPopupContext } from "../../contexts/window-popup";
@@ -16,8 +12,15 @@ import OptionsCard from "../options-card/options-card";
 import "./buy-options-popup.scss";
 
 const BuyOptions = ({ trigger }) => {
-  const { productSelected, itemsTotal, setItemsTotal, formData, formTotal } =
-    useContext(WindowPopUpBuyContext);
+  const {
+    productSelected,
+    itemsTotal,
+    setItemsTotal,
+    formData,
+    formTotal,
+    setFormTotal,
+    setFormData,
+  } = useContext(WindowPopUpBuyContext);
   const { setWindowPopup } = useContext(WindowPopupContext);
   const { addItemToCart } = useContext(CartContext);
   const [characterCount, setCharacterCount] = useState(0);
@@ -53,6 +56,12 @@ const BuyOptions = ({ trigger }) => {
     setItemsTotal(itemsTotal - 1);
   };
 
+  const resetFields = () => {
+    setItemsTotal(1);
+    setFormTotal(0);
+    setFormData([]);
+  };
+
   const addProductToCart = () => {
     const totalProduct = (price + formTotal) * itemsTotal;
 
@@ -63,7 +72,8 @@ const BuyOptions = ({ trigger }) => {
       options: formData,
       observation,
     });
-    setItemsTotal(1);
+
+    resetFields();
     toggleWindowPopup();
   };
 
@@ -105,7 +115,7 @@ const BuyOptions = ({ trigger }) => {
               </div>
               <form>
                 {options.map((option) => (
-                  <OptionsCard key={option.id} option={option} />
+                  <OptionsCard key={option.title} option={option} />
                 ))}
               </form>
               <div className="dish-content-observation">

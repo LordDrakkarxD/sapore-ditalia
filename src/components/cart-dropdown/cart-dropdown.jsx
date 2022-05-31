@@ -50,7 +50,7 @@ const CartDropdown = () => {
                 <div className="cart-section-title">{category}</div>
                 {cartItems.map((cartItem) =>
                   cartItem.section === category ? (
-                    <CartCard key={cartItem.id} cartItem={cartItem} />
+                    <CartCard key={cartItem.title} cartItem={cartItem} />
                   ) : (
                     ""
                   )
