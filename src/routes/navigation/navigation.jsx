@@ -10,17 +10,18 @@ import CartDropdown from "../../components/cart-dropdown/cart-dropdown";
 import { CartContext } from "../../contexts/cart";
 
 // import { signOutUser } from "../../utils/firebase/firebase.utils";
-
+import DItaliaLogo from "../../assets/logo.png";
 import "./navigation.scss";
 
 const Navigation = () => {
   const { isCartOpen } = useContext(CartContext);
 
-  const linksList = {};
-
   return (
     <Fragment>
       <div className="navigation-container">
+        <Link className="logo-container" to="/">
+          <img className="logo" src={DItaliaLogo} alt="Logo" />
+        </Link>
         <NavBar />
         <div className="nav-buttons">
           <UserIcon />

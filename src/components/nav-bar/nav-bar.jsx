@@ -6,10 +6,7 @@ import "./nav-bar.scss";
 
 const NavBar = () => {
   return (
-    <div className="nav-bar-container">
-      <Link className="logo-container" to="/">
-        <img className="logo" src={DItaliaLogo} alt="Logo" />
-      </Link>
+    <div className="nav-bar-links-container">
       <Link className="nav-bar-link" to="/">
         Home
       </Link>

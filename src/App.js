@@ -25,19 +25,21 @@ const App = () => {
           <Route path="shop" element={<Shop />} />
           <Route path="payment" element={<Payment />} />
           <Route path="checkout" element={<Checkout />} />
-          {/*<Route path="signin" element={<Authentication />} />*/}
-          {/*<Route
-            path="signup"
-            element={
-              currentUser ? (
-                setTimeout(() => {
-                  navigate("/");
-                }, 5000)
-              ) : (
-                <Registration />
-              )
-            }
-          />*/}
+          {<Route path="signin" element={<Authentication />} />}
+          {
+            <Route
+              path="signup"
+              element={
+                currentUser ? (
+                  setTimeout(() => {
+                    navigate("/");
+                  }, 5000)
+                ) : (
+                  <Registration />
+                )
+              }
+            />
+          }
         </Route>
       </Routes>
       <Footer />
