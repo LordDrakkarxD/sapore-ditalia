@@ -28,7 +28,7 @@ const SHOP_DATA = [
       },
       {
         title: "Pizza de Queijo Brie com Pera, Mel e Castanha de Caju",
-        imageUrl: "https://i.imgur.com/cd3fc0G.jpg",
+        imageUrl: "https://i.imgur.com/lTasdnU.jpg",
         price: 25,
         servings: 1,
         description: "Experimente uma de nossas entradas!",
@@ -36,7 +36,7 @@ const SHOP_DATA = [
       },
       {
         title: "Shitake com Grão de Bico",
-        imageUrl: "https://i.imgur.com/cd3fc0G.jpg",
+        imageUrl: "https://i.imgur.com/VRn7TEa.jpg",
         price: 25,
         servings: 1,
         description: "Experimente uma de nossas entradas!",
@@ -105,7 +105,7 @@ const SHOP_DATA = [
       },
       {
         title: "Lasanha",
-        imageUrl: "https://i.imgur.com/EKS2eGZ.jpg",
+        imageUrl: "https://i.imgur.com/wsyXmpO.jpg",
         price: 35,
         servings: 4,
         description: "Deliciosas massas com varias opcoes!",
@@ -131,7 +131,7 @@ const SHOP_DATA = [
       },
       {
         title: "Nhoque",
-        imageUrl: "https://i.imgur.com/2CU0ViU.jpg",
+        imageUrl: "https://i.imgur.com/KGgsEcX.jpg",
         price: 25,
         servings: 5,
         description: "Deliciosas massas com varias opcoes!",
@@ -162,7 +162,7 @@ const SHOP_DATA = [
       },
       {
         title: "Ravioli",
-        imageUrl: "https://i.imgur.com/GWL2sDT.jpg",
+        imageUrl: "https://i.imgur.com/N2ke7No.jpg",
         price: 18,
         servings: 1,
         description: "Deliciosas massas com varias opcoes!",
@@ -238,7 +238,7 @@ const SHOP_DATA = [
       },
       {
         title: "Sorrentino",
-        imageUrl: "https://i.imgur.com/GSryRl9.jpg",
+        imageUrl: "https://i.imgur.com/TkdB77G.jpg",
         price: 18,
         servings: 1,
         description: "Deliciosas massas com varias opcoes!",
@@ -273,7 +273,7 @@ const SHOP_DATA = [
       },
       {
         title: "Torta",
-        imageUrl: "https://i.imgur.com/GSryRl9.jpg",
+        imageUrl: "https://i.imgur.com/usBCefZ.jpg",
         price: 18,
         servings: 1,
         description: "Deliciosas massas com varias opcoes!",
