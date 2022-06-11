@@ -14,11 +14,11 @@ Default: 1
 
 --- 02 COLORS
 
-- Primary: 
+- Primary: #ffd700
 - Tints:
 - Shades:
 - Accents:
-- Greys: #555
+- Greys: #555 #333
 
 
 --- 03 HD IMAGES
@@ -50,10 +50,12 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  background-color: #0d0e10;
 }
 
 a {

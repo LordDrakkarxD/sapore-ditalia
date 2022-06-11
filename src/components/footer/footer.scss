@@ -1,120 +1,142 @@
 .footer {
-  background-color: #f8f8f8;
-  padding: 38px 0 57px;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-}
+  padding: 12.8rem 0;
 
-.footer-container {
-  width: 100%;
-  max-width: 1170px;
-  margin: auto;
-}
+  border-top: 1px solid #eee;
 
-.company-container {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 35px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.company-details {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  p {
-    font-size: 12px;
-    font-weight: 400;
-    color: #6b6b6b;
-  }
-}
-
-.footer-img {
-  margin-right: 50px;
-
-  .footer-logo {
-    max-height: 100px;
-  }
-}
-
-.institutional-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.institutional-links {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.nav-link {
-  display: flex;
-  flex-direction: column;
-
-  .cards-nav-link {
+  .footer-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
 
-    //height: 40px;
-    //width: 40px;
+    max-width: 120rem;
 
-    .card-nav-link {
-      max-width: 50px;
-      width: 100%;
-      height: 100%;
+    padding: 0 3.2rem;
+
+    margin: 0 auto;
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+
+      .footer-logo {
+        margin-bottom: 3.2rem;
+
+        .logo {
+          height: 7.4rem;
+        }
+      }
+
+      .social-links {
+        display: flex;
+        gap: 2.4rem;
+
+        .social-link {
+          font-size: 1.6rem;
+          color: #767676;
+          transition: all 0.3s;
+
+          .social-icon {
+            height: 2.4rem;
+          }
+
+          &.youtube:hover,
+          &.youtube:active {
+            transform: scale(1.1);
+            color: #ff0000;
+          }
+
+          &.facebook:hover,
+          &.facebook:active {
+            transform: scale(1.1);
+            color: #4267b2;
+          }
+
+          &.instagram:hover,
+          &.instagram:active {
+            transform: scale(1.1);
+            color: #c13584;
+          }
+        }
+      }
+
+      .copyright {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        color: #767676;
+
+        margin-top: auto;
+      }
+    }
+
+    .contact-container {
+      .footer-heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 4rem;
+      }
+
+      .contact-info-heading {
+        font-size: 1.6rem;
+        line-height: 1.6;
+
+        .address-info {
+          margin-bottom: 2.4rem;
+        }
+
+        .contact-info {
+          .footer-link {
+            font-size: 1.6rem;
+            color: #767676;
+            transition: all 0.3s;
+
+            &:hover,
+            &:active {
+              color: #555;
+            }
+          }
+        }
+      }
+    }
+
+    .nav-container {
+      .nav-heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 4rem;
+      }
+
+      .footer-cards-nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.4rem;
+        // display: flex;
+        // gap: 2.4rem;
+
+        .footer-card {
+          height: 2.2rem;
+          //font-size: 1.6rem;
+          color: #767676;
+          //transition: all 0.3s;
+        }
+      }
+
+      .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        .footer-link {
+          font-size: 1.6rem;
+          color: #767676;
+          transition: all 0.3s;
+
+          &:hover,
+          &:active {
+            color: #555;
+          }
+        }
+      }
     }
   }
-}
-
-.link {
-  font-size: 12px;
-  font-weight: 400;
-  color: #8c8c8c;
-  margin: 0 3px 15px;
-  display: block;
-}
-
-.social-link {
-  display: inline-block;
-  font-size: 30px;
-  transition: all 0.3s;
-  font-weight: 400;
-  color: #8c8c8c;
-  margin: 0 3px 15px;
-
-  transition: transform 0.5s;
-
-  &.youtube:hover,
-  &.youtube:active {
-    transform: scale(1.1);
-    color: #ff0000;
-  }
-
-  &.facebook:hover,
-  &.facebook:active {
-    transform: scale(1.1);
-    color: #4267b2;
-  }
-
-  &.instagram:hover,
-  &.instagram:active {
-    transform: scale(1.1);
-    color: #c13584;
-  }
-}
-
-.social-links {
-  display: flex;
-}
-
-h2 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #404040;
-  margin-bottom: 20px;
 }

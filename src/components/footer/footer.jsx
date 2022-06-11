@@ -8,25 +8,25 @@ import { UserContext } from "../../contexts/user";
 
 import Logo from "../../assets/logo.png";
 
-import BoletoIcon from "../../assets/boleto.svg";
+import BoletoIcon from "../../assets/cards/boleto.svg";
 
-import EloIcon from "../../assets/elo.svg";
+import EloIcon from "../../assets/cards/elo.svg";
 
-import VisaIcon from "../../assets/visa.svg";
+import VisaIcon from "../../assets/cards/visa.svg";
 
-import MasterCardIcon from "../../assets/mastercard.svg";
+import MasterCardIcon from "../../assets/cards/mastercard.svg";
 
-import HyperCardIcon from "../../assets/hipercard-v2.svg";
+import HyperCardIcon from "../../assets/cards/hipercard-v2.svg";
 
-import AmexIcon from "../../assets/amex-american-express-v2.svg";
+import AmexIcon from "../../assets/cards/amex-american-express-v2.svg";
 
-import DinersIcon from "../../assets/diners-club-international-v2.svg";
+import DinersIcon from "../../assets/cards/diners-club-international-v2.svg";
 
-import PIXIcon from "../../assets/pix-106.svg";
+import PIXIcon from "../../assets/cards/pix-2.png";
 
-import EncryptIcon from "../../assets/let-s-encrypt-seeklogo.com.svg";
+import EncryptIcon from "../../assets/cards/let-s-encrypt-seeklogo.com.svg";
 
-import PagarMeIcon from "../../assets/pagarme.svg";
+import PagarMeIcon from "../../assets/cards/pagarme.svg";
 
 import "./footer.scss";
 
@@ -36,150 +36,138 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-container">
-        <div className="company-container">
-          <div className="company-details">
-            <div className="footer-img">
-              <Link to="/">
-                <img src={Logo} className="footer-logo" alt="Clube Massa" />
-              </Link>
-            </div>
-            <p>Rua Turiassu, 340, Perdizes, Sao Paulo/SP CEP 05005-000</p>
+        <div className="logo-container">
+          <Link className="footer-logo" to="/">
+            <img src={Logo} className="logo" alt="Clube Massa" />
+          </Link>
+          <div className="social-links">
+            <Link
+              className="social-link facebook"
+              to={{ pathname: "https://facebook.com" }}
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                className="social-icon"
+                icon={brands("facebook")}
+              />
+            </Link>
+            <Link
+              className="social-link instagram"
+              to={{ pathname: "https://instagram.com" }}
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                className="social-icon"
+                icon={brands("instagram")}
+              />
+            </Link>
+            <Link
+              className="social-link youtube"
+              to={{ pathname: "https://youtube.com" }}
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                className="social-icon"
+                icon={brands("youtube")}
+              />
+            </Link>
           </div>
-          <div className="company-details">
-            <p>CATHERINE GRAZIELLE FRANKE ME,</p>
-            <p>26084714000119</p>
+          <div className="copyright">
+            Copyright © 2022 by Sapore D'Italia,
+            <br />
+            Inc. All Rights reserved.
           </div>
         </div>
-        <div className="institutional-container">
-          <div className="institutional-links">
-            <div className="nav-link">
-              <h2>Institucional</h2>
-              <Link className="link" to="/quem-somos">
-                Quem Somos
+        <div className="contact-container">
+          <p className="footer-heading">Contato</p>
+          <div className="contact-info-heading">
+            <p className="address-info">
+              R. Turiassu 340 Perdizes, apt 154 Bloco A,
+              <br />
+              Sao Paulo, SP 05005-000
+            </p>
+            <p className="contact-info">
+              <Link
+                className="footer-link"
+                to="#"
+                onClick={(e) => {
+                  window.location = "tel:11 95958-9451";
+                  e.preventDefault();
+                }}
+              >
+                (11) 95958-9451
               </Link>
-              <Link className="link" to="/seguranca">
-                Segurança
+              <br />
+              <Link
+                className="footer-link"
+                to="#"
+                onClick={(e) => {
+                  window.location = "mailto:contato@saporediitalia.com.br";
+                  e.preventDefault();
+                }}
+              >
+                contato@saporediitalia.com.br
               </Link>
-              <Link className="link" to="/politica-de-privacidade">
-                Política de Privacidade
-              </Link>
-            </div>
-            <div className="nav-link">
-              <h2>Serviços</h2>
-              <Link className="link" to="/central-de-atendimento">
-                Central de Atendimento
-              </Link>
-              <Link className="link" to="/fale-conosco">
-                Fale Conosco
-              </Link>
-            </div>
+            </p>
           </div>
-          <div className="institutional-links">
-            <div>
-              <div className="nav-link">
-                <h2>Dúvidas</h2>
-                {currentUser && (
-                  <Link className="link" to="/account/orders">
-                    Meus Pedidos
-                  </Link>
-                )}
+        </div>
+        <div className="nav-container">
+          <p className="nav-heading">Dúvidas</p>
+          <div className="footer-nav">
+            {currentUser && (
+              <Link className="footer-link" to="/account/orders">
+                Meus Pedidos
+              </Link>
+            )}
 
-                <Link className="link" to="/como-comprar">
-                  Como Comprar
-                </Link>
-                <Link className="link" to="/termos-e-condicoes">
-                  Termos e Condições
-                </Link>
-                <Link className="link" to="/entrega">
-                  Entrega
-                </Link>
-                <Link className="link" to="/troca-e-devolucao">
-                  Troca e Devolução
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="institutional-links">
-            <div className="nav-link">
-              <h2>Atendimento</h2>
-              <Link className="link" to="mailto:contato@saporediitalia.com.br">
-                contato@saporediitalia.com.br{" "}
-              </Link>
-            </div>
-          </div>
-          <div className="institutional-links">
-            <div className="nav-link">
-              <h2>Redes Sociais</h2>
-              <div className="social-links">
-                <Link
-                  className="social-link facebook"
-                  to={{ pathname: "https://facebook.com" }}
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={brands("facebook")} />
-                </Link>
-                <Link
-                  className="social-link instagram"
-                  to={{ pathname: "https://instagram.com" }}
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={brands("instagram")} />
-                </Link>
-                <Link
-                  className="social-link youtube"
-                  to={{ pathname: "https://youtube.com" }}
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={brands("youtube")} />
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="institutional-links">
-            <div className="nav-link">
-              <h2>Formas de Pagamento</h2>
-              <div className="cards-nav-link">
-                <img src={VisaIcon} className="card-nav-link" alt="Boleto" />
-                <img
-                  src={MasterCardIcon}
-                  className="card-nav-link"
-                  alt="Boleto"
-                />
-                <img src={AmexIcon} className="card-nav-link" alt="Boleto" />
-                <img src={DinersIcon} className="card-nav-link" alt="Boleto" />
-                <img
-                  src={HyperCardIcon}
-                  className="card-nav-link"
-                  alt="Boleto"
-                />
-                <img src={EloIcon} className="card-nav-link" alt="Boleto" />
-                <img src={BoletoIcon} className="card-nav-link" alt="Boleto" />
-                <img src={PIXIcon} className="card-nav-link" alt="Boleto" />
-              </div>
-              {/*<img
-                src="https://assets.betalabs.net/production/clubemassa/images/stores/1/bandeiras.jpg"
-                alt="bandeiras"
-                />*/}
-            </div>
-          </div>
-          <div className="institutional-links">
-            <div className="nav-link">
-              <h2>Segurança</h2>
-              <div className="cards-nav-link">
-                <img
-                  src={PagarMeIcon}
-                  className="card-nav-link"
-                  alt="security"
-                />
-                <img
-                  src={EncryptIcon}
-                  className="card-nav-link"
-                  alt="security"
-                />
-              </div>
-            </div>
+            <Link className="footer-link" to="/como-comprar">
+              Como Comprar
+            </Link>
+            <Link className="footer-link" to="/termos-e-condicoes">
+              Termos e Condições
+            </Link>
+            <Link className="footer-link" to="/entrega">
+              Entrega
+            </Link>
+            <Link className="footer-link" to="/troca-e-devolucao">
+              Troca e Devolução
+            </Link>
           </div>
         </div>
+        <div className="nav-container">
+          <p className="nav-heading">Institucional</p>
+          <div className="footer-nav">
+            <Link className="footer-link" to="/quem-somos">
+              Quem Somos
+            </Link>
+            <Link className="footer-link" to="/seguranca">
+              Segurança
+            </Link>
+            <Link className="footer-link" to="/politica-de-privacidade">
+              Política de Privacidade
+            </Link>
+          </div>
+        </div>
+        <div className="nav-container">
+          <p className="nav-heading">Formas de Pagamento</p>
+          <div className="footer-cards-nav">
+            <img src={VisaIcon} className="footer-card" alt="Boleto" />
+            <img src={MasterCardIcon} className="footer-card" alt="Boleto" />
+            <img src={AmexIcon} className="footer-card" alt="Boleto" />
+            <img src={DinersIcon} className="footer-card" alt="Boleto" />
+            <img src={HyperCardIcon} className="footer-card" alt="Boleto" />
+            <img src={EloIcon} className="footer-card" alt="Boleto" />
+            <img src={BoletoIcon} className="footer-card" alt="Boleto" />
+            <img src={PIXIcon} className="footer-card" alt="Boleto" />
+          </div>
+        </div>
+        {/*<div className="nav-container">
+          <p className="nav-heading">Segurança</p>
+          <div className="footer-cards-nav">
+            <img src={PagarMeIcon} className="footer-card" alt="security" />
+            <img src={EncryptIcon} className="footer-card" alt="security" />
+          </div>
+            </div>*/}
       </div>
     </div>
   );

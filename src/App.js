@@ -25,8 +25,8 @@ const App = () => {
           <Route path="shop" element={<Shop />} />
           <Route path="payment" element={<Payment />} />
           <Route path="checkout" element={<Checkout />} />
-          {<Route path="signin" element={<Authentication />} />}
-          {
+          <Route path="signin" element={<Authentication />} />
+          {/*
             <Route
               path="signup"
               element={
@@ -39,7 +39,7 @@ const App = () => {
                 )
               }
             />
-          }
+            */}
         </Route>
       </Routes>
       <Footer />

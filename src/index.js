@@ -9,8 +9,6 @@ import { CartProvider } from "./contexts/cart";
 import { WindowPopUpBuyProvider } from "./contexts/window-popup-buy";
 import { WindowPopupProvider } from "./contexts/window-popup";
 
-import { ChakraProvider } from "@chakra-ui/react";
-
 import reportWebVitals from "./reportWebVitals";
 
 import "./index.scss";
@@ -25,9 +23,7 @@ root.render(
           <CartProvider>
             <WindowPopUpBuyProvider>
               <WindowPopupProvider>
-                <ChakraProvider>
-                  <App />
-                </ChakraProvider>
+                <App />
               </WindowPopupProvider>
             </WindowPopUpBuyProvider>
           </CartProvider>

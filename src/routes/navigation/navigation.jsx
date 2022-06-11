@@ -19,15 +19,15 @@ const Navigation = () => {
   return (
     <Fragment>
       <div className="navigation-container">
-        <Link className="logo-container" to="/">
+        <Link to="/">
           <img className="logo" src={DItaliaLogo} alt="Logo" />
         </Link>
         <NavBar />
-        <div className="nav-buttons">
+        {/*<div className="nav-buttons">
           <UserIcon />
           <CartIcon />
         </div>
-        {isCartOpen && <CartDropdown />}
+  {isCartOpen && <CartDropdown />}*/}
       </div>
       <Outlet />
     </Fragment>

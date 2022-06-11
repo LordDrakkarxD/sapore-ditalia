@@ -13,9 +13,9 @@ const NavBar = () => {
       <Link className="nav-bar-link" to="/menu">
         Gastronomia
       </Link>
-      <Link className="nav-bar-link" to="/shop">
+      {/*<Link className="nav-bar-link" to="/shop">
         Peca Ja
-      </Link>
+  </Link>*/}
       <Link className="nav-bar-link" to="/who">
         Quem Somos
       </Link>
