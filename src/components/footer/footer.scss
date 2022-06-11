@@ -74,6 +74,7 @@
         font-size: 1.8rem;
         font-weight: 500;
         margin-bottom: 4rem;
+        color: #ffd700;
       }
 
       .contact-info-heading {
@@ -104,20 +105,17 @@
         font-size: 1.8rem;
         font-weight: 500;
         margin-bottom: 4rem;
+        color: #ffd700;
       }
 
       .footer-cards-nav {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2.4rem;
-        // display: flex;
-        // gap: 2.4rem;
 
         .footer-card {
           height: 2.2rem;
-          //font-size: 1.6rem;
           color: #767676;
-          //transition: all 0.3s;
         }
       }
 
