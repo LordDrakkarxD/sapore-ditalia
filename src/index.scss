@@ -15,7 +15,7 @@ Default: 1
 --- 02 COLORS
 
 - Primary: #ffd700
-- Tints:
+- Tints: #b39700
 - Shades:
 - Accents:
 - Greys: #555 #333
@@ -70,4 +70,18 @@ a {
 .root {
   min-height: 100%;
   margin: 0 auto;
+}
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
 }

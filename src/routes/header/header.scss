@@ -1,0 +1,65 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 12rem;
+
+  padding: 0 5.6rem;
+
+  box-shadow: 0 1.2rem 3.2rem rgb(0 0 0 / 3%);
+
+  z-index: 9999;
+
+  animation: moveDown 1.25s ease-in-out;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 12rem;
+
+    background-color: rgba(13, 14, 16, 0.8);
+
+    animation: fadeIn 1.25s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes moveDown {
+    from {
+      transform: translateY(-12rem);
+    }
+    to {
+      transform: translateY(0rem);
+    }
+  }
+
+  &.sticky + .hero-container {
+    padding-top: 12rem;
+  }
+
+  .cart-container {
+    height: calc(100vh - 80px);
+  }
+
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+
+  .logo {
+    max-height: 10rem;
+    height: 100%;
+  }
+}

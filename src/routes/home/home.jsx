@@ -1,5 +1,8 @@
 import { Outlet } from "react-router-dom";
 
+import Hero from "../../components/hero/hero";
+import Header from "../../routes/header/header";
+import Slider from "../../components/slider/slider";
 import HowItWorks from "../../components/how-it-works/how-it-works";
 
 import "./home.scss";
@@ -7,7 +10,15 @@ import "./home.scss";
 const Home = () => {
   return (
     <div className="home-container">
+      <div className="header-content">
+        <Header />
+        <Hero />
+      </div>
+      <Slider />
       <HowItWorks />
+      <div>AMOSTRA DO CARDAPIO</div>
+
+      {/*<HowItWorks />*/}
       <Outlet />
     </div>
   );

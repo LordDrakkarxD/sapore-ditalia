@@ -4,10 +4,28 @@
 
   column-gap: 2.4rem;
 
+  &.sticky {
+    .nav-bar-link {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #b39700;
+
+      transition: all 0.5s;
+
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        color: #ffd700;
+        transform: translateY(5px);
+      }
+    }
+  }
+
   .nav-bar-link {
     font-size: 1.8rem;
     font-weight: 500;
-    color: #ffd700;
+    color: #fff;
 
     transition: all 0.5s;
 
@@ -15,6 +33,7 @@
 
     &:hover,
     &:active {
+      color: #ddd;
       transform: translateY(5px);
     }
   }

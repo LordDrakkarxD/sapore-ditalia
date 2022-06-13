@@ -2,9 +2,8 @@ import { useContext } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 import Home from "./routes/home/home";
-import Navigation from "./routes/navigation/navigation";
 import Authentication from "./routes/authentication/authentication";
-import Registration from "./routes/registration/registration";
+import Header from "./routes/header/header";
 import Shop from "./routes/shop/shop";
 import Checkout from "./routes/checkout/checkout";
 import Payment from "./routes/payment/payment";
@@ -20,13 +19,13 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Navigation />}>
-          <Route index element={<Home />} />
-          <Route path="shop" element={<Shop />} />
-          <Route path="payment" element={<Payment />} />
-          <Route path="checkout" element={<Checkout />} />
-          <Route path="signin" element={<Authentication />} />
-          {/*
+        <Route path="/" element={<Header />} />
+        <Route index element={<Home />} />
+        <Route path="shop" element={<Shop />} />
+        <Route path="payment" element={<Payment />} />
+        <Route path="checkout" element={<Checkout />} />
+        <Route path="signin" element={<Authentication />} />
+        {/*
             <Route
               path="signup"
               element={
@@ -40,7 +39,6 @@ const App = () => {
               }
             />
             */}
-        </Route>
       </Routes>
       <Footer />
     </div>

@@ -1,3 +1,9 @@
 .home-container {
-  padding: 0 50px;
+  .header-content {
+    background: no-repeat url(https://i.imgur.com/elU39Rl.jpg) center center;
+
+    background-size: cover;
+
+    //filter: brightness(50%);
+  }
 }

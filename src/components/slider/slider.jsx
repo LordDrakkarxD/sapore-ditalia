@@ -45,17 +45,7 @@ const Slider = () => {
   }, [currentSlide]);
 
   return (
-    <div className="slider">
-      {/*<FontAwesomeIcon
-        icon={solid("arrow-left")}
-        className="arrow prev"
-        onClick={prevSlide}
-      />
-      <FontAwesomeIcon
-        icon={solid("arrow-right")}
-        className="arrow next"
-        onClick={nextSlide}
-  />*/}
+    <div className="slider-container">
       {sliderData.map((slide, index) => {
         return (
           <div
