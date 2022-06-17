@@ -5,14 +5,12 @@
 
   .footer-container {
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 6.4rem;
     row-gap: 9.6rem;
 
     max-width: 120rem;
-
     padding: 0 3.2rem;
-
     margin: 0 auto;
 
     .logo-container {
@@ -20,10 +18,10 @@
       flex-direction: column;
 
       .footer-logo {
-        margin-bottom: 3.2rem;
+        margin-bottom: 1.8rem;
 
         .logo {
-          height: 7.4rem;
+          height: 8rem;
         }
       }
 
@@ -34,7 +32,7 @@
         .social-link {
           font-size: 1.6rem;
           color: #b39700;
-          transition: all 0.3s;
+          transition: all 0.7s;
 
           .social-icon {
             height: 2.4rem;
@@ -56,6 +54,18 @@
           &.instagram:active {
             transform: scale(1.1);
             color: #c13584;
+          }
+
+          &.whatsapp:hover,
+          &.whatsapp:active {
+            transform: scale(1.1);
+            color: #25d366;
+          }
+
+          &.email:hover,
+          &.email:active {
+            transform: scale(1.1);
+            color: red;
           }
         }
       }
@@ -136,6 +146,50 @@
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 75em) {
+    padding: 10rem 0;
+
+    .footer-container {
+      column-gap: 4.8rem;
+      row-gap: 6.4rem;
+    }
+  }
+
+  @media (max-width: 59em) {
+    padding: 9rem 0;
+
+    .footer-container {
+      column-gap: 4.8rem;
+      row-gap: 6.4rem;
+    }
+  }
+
+  @media (max-width: 44em) {
+    padding: 8rem 0;
+
+    .footer-container {
+      grid-template-columns: repeat(6, 1fr);
+
+      .nav-container {
+        grid-row: 1;
+        grid-column: span 2;
+      }
+
+      .logo-container,
+      .contact-container {
+        grid-column: span 3;
+      }
+    }
+  }
+
+  @media (max-width: 34em) {
+    padding: 6.8rem 0;
+
+    .footer-container {
+      row-gap: 4.8rem;
     }
   }
 }

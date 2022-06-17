@@ -7,9 +7,10 @@ import "./hero.scss";
 const Hero = () => {
   return (
     <div className="hero-container">
-      <Link to="/">
-        <img className="logo" src={DItaliaLogo} alt="Logo" />
-      </Link>
+      <div className="hero">
+        <img className="hero-logo" src={DItaliaLogo} alt="Logo" />
+        <span className="hero-heading">Cozinhar é uma arte!</span>
+      </div>
     </div>
   );
 };

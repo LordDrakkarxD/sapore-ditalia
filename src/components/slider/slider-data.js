@@ -27,6 +27,6 @@ export const sliderData = [
     step: "05",
     imageUrl: "https://i.imgur.com/wMx2a7O.jpeg",
     heading: "Produto Final",
-    desc: "",
+    desc: "Confeccao da massa e demais ingredientes",
   },
 ];

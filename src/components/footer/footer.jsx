@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 import { UserContext } from "../../contexts/user";
 
@@ -43,8 +43,15 @@ const Footer = () => {
           <div className="social-links">
             <Link
               className="social-link facebook"
-              to={{ pathname: "https://facebook.com" }}
-              target="_blank"
+              to="#"
+              onClick={(e) => {
+                window.open(
+                  "https://facebook.com",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+                e.preventDefault();
+              }}
             >
               <FontAwesomeIcon
                 className="social-icon"
@@ -53,8 +60,15 @@ const Footer = () => {
             </Link>
             <Link
               className="social-link instagram"
-              to={{ pathname: "https://instagram.com" }}
-              target="_blank"
+              to="#"
+              onClick={(e) => {
+                window.open(
+                  "https://instagram.com",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+                e.preventDefault();
+              }}
             >
               <FontAwesomeIcon
                 className="social-icon"
@@ -63,12 +77,49 @@ const Footer = () => {
             </Link>
             <Link
               className="social-link youtube"
-              to={{ pathname: "https://youtube.com" }}
-              target="_blank"
+              to="#"
+              onClick={(e) => {
+                window.open(
+                  "https://youtube.com",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+                e.preventDefault();
+              }}
             >
               <FontAwesomeIcon
                 className="social-icon"
                 icon={brands("youtube")}
+              />
+            </Link>
+            <Link
+              className="social-link whatsapp"
+              to="#"
+              onClick={(e) => {
+                window.open(
+                  "https://wa.me/5511959589451",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+                e.preventDefault();
+              }}
+            >
+              <FontAwesomeIcon
+                className="social-icon"
+                icon={brands("whatsapp")}
+              />
+            </Link>
+            <Link
+              className="social-link email"
+              to="#"
+              onClick={(e) => {
+                window.location = "mailto:contato@saporediitalia.com.br";
+                e.preventDefault();
+              }}
+            >
+              <FontAwesomeIcon
+                className="social-icon"
+                icon={solid("envelope")}
               />
             </Link>
           </div>

@@ -8,8 +8,6 @@ import Shop from "./routes/shop/shop";
 import Checkout from "./routes/checkout/checkout";
 import Payment from "./routes/payment/payment";
 
-import Footer from "./components/footer/footer";
-
 import { UserContext } from "./contexts/user";
 
 const App = () => {
@@ -40,7 +38,6 @@ const App = () => {
             />
             */}
       </Routes>
-      <Footer />
     </div>
   );
 };

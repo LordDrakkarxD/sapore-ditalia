@@ -44,8 +44,33 @@ const Slider = () => {
     return () => clearInterval(slideInterval);
   }, [currentSlide]);
 
+  // return (
+  //   <div className="slider">
+  //     {sliderData.map((slide, index) => {
+  //       return (
+  //         <div
+  //           className={index === currentSlide ? "slide current" : ""}
+  //           key={index}
+  //         >
+  //           {index === currentSlide && (
+  //             <div>
+  //               <img src={slide.imageUrl} alt="slide" className="image" />
+  //               {/*<div className="content">
+  //                 <h2>{slide.heading}</h2>
+  //                 <p>{slide.desc}</p>
+  //                 <hr />
+  //                 <button className="--btn --btn-primary">Get Started</button>
+  //           </div>*/}
+  //             </div>
+  //           )}
+  //         </div>
+  //       );
+  //     })}
+  //   </div>
+  // );
+
   return (
-    <div className="slider-container">
+    <section className="slider">
       {sliderData.map((slide, index) => {
         return (
           <div
@@ -53,19 +78,18 @@ const Slider = () => {
             key={index}
           >
             {index === currentSlide && (
-              <div>
-                <img src={slide.imageUrl} alt="slide" className="slide-img" />
-                <div className="slide-content">
-                  <h2 className="slide-heading">{slide.heading}</h2>
-                  <p className="slide-text">{slide.desc}</p>
-                </div>
-              </div>
+              <img src={slide.imageUrl} alt="slide" className="image" />
             )}
           </div>
         );
       })}
-    </div>
+    </section>
   );
 };
 
 export default Slider;
+
+{
+  /*<AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
+  <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />*/
+}

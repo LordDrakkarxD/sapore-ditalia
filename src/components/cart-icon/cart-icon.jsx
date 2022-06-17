@@ -26,10 +26,7 @@ const CartIcon = () => {
       className={`cart-icon-container ${isCartFull()}`}
       onClick={toggleIsCartOpen}
     >
-      <FontAwesomeIcon
-        icon={solid("bag-shopping")}
-        className="cart-icon"
-      ></FontAwesomeIcon>
+      <FontAwesomeIcon icon={solid("bag-shopping")} className="cart-icon" />
       <p className="cart-info">
         <span className="cart-cost">R$ {cartTotal.toFixed(2)}</span>
         <span className="cart-items">

@@ -10,10 +10,7 @@ import "./user-icon.scss";
 const UserIcon = () => {
   return (
     <div className="user-icon-container">
-      <FontAwesomeIcon
-        icon={regular("user")}
-        className="user-icon"
-      ></FontAwesomeIcon>
+      <FontAwesomeIcon icon={regular("user")} className="user-icon" />
     </div>
   );
 };
