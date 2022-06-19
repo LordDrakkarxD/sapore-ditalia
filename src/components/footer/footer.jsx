@@ -137,29 +137,7 @@ const Footer = () => {
               <br />
               Sao Paulo, SP 05005-000
             </p>
-            <p className="contact-info">
-              <Link
-                className="footer-link"
-                to="#"
-                onClick={(e) => {
-                  window.location = "tel:11 95958-9451";
-                  e.preventDefault();
-                }}
-              >
-                (11) 95958-9451
-              </Link>
-              <br />
-              <Link
-                className="footer-link"
-                to="#"
-                onClick={(e) => {
-                  window.location = "mailto:contato@saporediitalia.com.br";
-                  e.preventDefault();
-                }}
-              >
-                contato@saporediitalia.com.br
-              </Link>
-            </p>
+            <p className="contact-info"></p>
           </div>
         </div>
         <div className="nav-container">
