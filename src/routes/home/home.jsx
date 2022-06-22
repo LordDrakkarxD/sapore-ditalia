@@ -4,6 +4,7 @@ import Hero from "../../components/hero/hero";
 import Header from "../../routes/header/header";
 import Slider from "../../components/slider/slider";
 import Plans from "../../components/plans/plans";
+import CTA from "../../components/cta/cta";
 import HowItWorks from "../../components/how-it-works/how-it-works";
 
 import Footer from "../../components/footer/footer";
@@ -18,8 +19,10 @@ const Home = () => {
         <Hero />
       </div>
       <Slider />
-      {/*<HowItWorks />*/}
       <Plans />
+      <CTA />
+      {/*<HowItWorks />*/}
+
       <Footer />
       <Outlet />
     </div>

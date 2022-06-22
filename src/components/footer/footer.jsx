@@ -6,7 +6,7 @@ import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 import { UserContext } from "../../contexts/user";
 
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo-1.png";
 
 import BoletoIcon from "../../assets/cards/boleto.svg";
 
@@ -174,6 +174,9 @@ const Footer = () => {
             </Link>
             <Link className="footer-link" to="/politica-de-privacidade">
               Política de Privacidade
+            </Link>
+            <Link className="footer-link" to="/contato">
+              Contato
             </Link>
           </div>
         </div>

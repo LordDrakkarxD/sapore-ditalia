@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
 
-  column-gap: 2.4rem;
+  column-gap: 4rem;
 
   z-index: 9999;
 
@@ -35,7 +35,7 @@
 
     &:hover,
     &:active {
-      color: #eee;
+      color: #ffd700;
       transform: translateY(5px);
     }
   }

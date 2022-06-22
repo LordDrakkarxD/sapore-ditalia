@@ -9,9 +9,9 @@
 
     max-width: 120rem;
 
-    margin: 0 auto;
+    height: 70vh;
 
-    //padding: 0 3.2rem;
+    margin: 0 auto;
 
     .hero-heading {
       font-size: 5.2rem;
@@ -25,7 +25,8 @@
     }
 
     .hero-logo {
-      width: 70%;
+      width: 50%;
+      height: 50%;
     }
   }
 }

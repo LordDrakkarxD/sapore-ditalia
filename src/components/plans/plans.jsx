@@ -9,9 +9,9 @@ import "./plans.scss";
 
 const Plans = () => {
   return (
-    <div className="section-plans-container">
+    <div className="section-plans-container" id="section-plans-container">
       <div className="plans-heading-container">
-        <span className="subheading">Planos</span>
+        <span className="subheading">Kits</span>
         <h2 className="heading-secondary">Em breve</h2>
       </div>
       <div className="plans-container">
@@ -25,7 +25,7 @@ const Plans = () => {
             <div className="plan-tags">
               <span className="plan-tag">Tag</span>
             </div>
-            <p className="plan-title">Combo 1</p>
+            <p className="plan-title">Kit 1</p>
             <ul className="plan-attributes">
               <li className="plan-attribute">
                 <FontAwesomeIcon
@@ -68,7 +68,7 @@ const Plans = () => {
             <div className="plan-tags">
               <span className="plan-tag">Tag</span>
             </div>
-            <p className="plan-title">Combo 2</p>
+            <p className="plan-title">Kit 2</p>
             <ul className="plan-attributes">
               <li className="plan-attribute">
                 <FontAwesomeIcon
@@ -111,7 +111,7 @@ const Plans = () => {
             <div className="plan-tags">
               <span className="plan-tag">Tag</span>
             </div>
-            <p className="plan-title">Combo 3</p>
+            <p className="plan-title">Kit 3</p>
             <ul className="plan-attributes">
               <li className="plan-attribute">
                 <FontAwesomeIcon

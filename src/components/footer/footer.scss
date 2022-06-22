@@ -16,6 +16,7 @@
     .logo-container {
       display: flex;
       flex-direction: column;
+      align-items: center;
 
       .footer-logo {
         margin-bottom: 1.8rem;
@@ -32,7 +33,7 @@
 
         .social-link {
           font-size: 1.6rem;
-          color: #b39700;
+          color: #fff;
           transition: all 0.7s;
 
           .social-icon {
@@ -74,7 +75,7 @@
       .copyright {
         font-size: 1.4rem;
         line-height: 1.6;
-        color: #b39700;
+        color: #fff;
 
         margin-top: auto;
       }
@@ -85,7 +86,7 @@
         font-size: 1.8rem;
         font-weight: 500;
         margin-bottom: 4rem;
-        color: #b39700;
+        color: #fff;
       }
 
       .contact-info-heading {
@@ -93,14 +94,14 @@
         line-height: 1.6;
 
         .address-info {
-          color: #b39700;
+          color: #fff;
           margin-bottom: 2.4rem;
         }
 
         .contact-info {
           .footer-link {
             font-size: 1.6rem;
-            color: #ffd700;
+            color: #fff;
             transition: all 0.3s;
 
             &:hover,
@@ -117,7 +118,7 @@
         font-size: 1.8rem;
         font-weight: 500;
         margin-bottom: 4rem;
-        color: #b39700;
+        color: #fff;
       }
 
       .footer-cards-nav {
@@ -138,12 +139,12 @@
 
         .footer-link {
           font-size: 1.6rem;
-          color: #ffd700;
-          transition: all 0.3s;
+          color: #fff;
+          transition: all 0.7s;
 
           &:hover,
           &:active {
-            color: #b39700;
+            color: #ffd700;
           }
         }
       }

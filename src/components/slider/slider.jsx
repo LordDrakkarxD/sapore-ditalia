@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  regular,
-  brands,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   solid,
+//   regular,
+//   brands,
+// } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 import { sliderData } from "./slider-data";
 
@@ -21,12 +21,10 @@ const Slider = () => {
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
-    console.log("next");
   };
 
   const prevSlide = () => {
     setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1);
-    console.log("prev");
   };
 
   function auto() {
@@ -70,7 +68,7 @@ const Slider = () => {
   // );
 
   return (
-    <section className="slider">
+    <section className="slider" id="slider">
       {sliderData.map((slide, index) => {
         return (
           <div
@@ -88,8 +86,3 @@ const Slider = () => {
 };
 
 export default Slider;
-
-{
-  /*<AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
-  <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />*/
-}

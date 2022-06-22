@@ -7,6 +7,7 @@ import Header from "./routes/header/header";
 import Shop from "./routes/shop/shop";
 import Checkout from "./routes/checkout/checkout";
 import Payment from "./routes/payment/payment";
+import QuemSomos from "./routes/quem-somos/quem-somos";
 
 import { UserContext } from "./contexts/user";
 
@@ -23,6 +24,17 @@ const App = () => {
         <Route path="payment" element={<Payment />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="signin" element={<Authentication />} />
+        <Route path="quem-somos" element={<QuemSomos title="Quem Somos" />} />
+        <Route path="seguranca" element={<QuemSomos title="Segurança" />} />
+        <Route
+          path="politica-de-privacidade"
+          element={<QuemSomos title="Política de Privacidade" />}
+        />
+        <Route
+          path="termos-e-condicoes"
+          element={<QuemSomos title="Termos e Condições" />}
+        />
+        <Route path="contato" element={<QuemSomos title="Contato" />} />
         {/*
             <Route
               path="signup"

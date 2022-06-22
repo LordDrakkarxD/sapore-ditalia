@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 
-import DItaliaLogo from "../../assets/logo.png";
+import DItaliaLogo from "../../assets/logo-1.png";
 
 import "./hero.scss";
 
@@ -9,7 +9,6 @@ const Hero = () => {
     <div className="hero-container">
       <div className="hero">
         <img className="hero-logo" src={DItaliaLogo} alt="Logo" />
-        <span className="hero-heading">Cozinhar é uma arte!</span>
       </div>
     </div>
   );
