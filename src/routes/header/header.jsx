@@ -4,16 +4,18 @@ import { Outlet, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
+import { CartContext } from "../../contexts/cart";
+
 import NavBar from "../../components/nav-bar/nav-bar";
 import CartIcon from "../../components/cart-icon/cart-icon";
 import UserIcon from "../../components/user-icon/user-icon";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown";
 
-// import { UserContext } from "../../contexts/user";
-import { CartContext } from "../../contexts/cart";
+import DItaliaLogo from "../../assets/logo-1.png";
 
+// import { UserContext } from "../../contexts/user";
 // import { signOutUser } from "../../utils/firebase/firebase.utils";
-import DItaliaLogo from "../../assets/logo.png";
+
 import "./header.scss";
 
 const Header = () => {
@@ -46,7 +48,16 @@ const Header = () => {
 
   return (
     <Fragment>
-      <div className={`header-container ${navOpen ? "nav-open" : ""}`}>
+      <div
+        className={`header-container ${stickyClass ? "sticky" : ""} ${
+          navOpen ? "nav-open" : ""
+        }`}
+      >
+        {stickyClass === "sticky" && (
+          <Link className="header-logo-link" to="/">
+            <img className="header-logo" src={DItaliaLogo} alt="Logo" />
+          </Link>
+        )}
         <NavBar />
         <button className="btn-mobile-nav" onClick={toggleNav}>
           <FontAwesomeIcon

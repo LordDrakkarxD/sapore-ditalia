@@ -128,20 +128,24 @@ const QuemSomos = ({ title }) => {
         </div>
         <div className="quem-somos-content">
           <div className="quem-somos-menu">
-            <h2>Secões</h2>
-            <hr />
-            <Link className="quem-somos-link" to="/seguranca">
-              Segurança
-            </Link>
-            <Link className="quem-somos-link" to="/politica-de-privacidade">
-              Política de Privacidade
-            </Link>
-            <Link className="quem-somos-link" to="/termos-e-condicoes">
-              Termos e Condições
-            </Link>
-            <Link className="quem-somos-link" to="/contato">
-              Contato
-            </Link>
+            <div className="quem-somos-menu-title">
+              <h2>Menu</h2>
+              <hr />
+            </div>
+            <div className="quem-somos-links">
+              <Link className="quem-somos-link" to="/seguranca">
+                Segurança
+              </Link>
+              <Link className="quem-somos-link" to="/politica-de-privacidade">
+                Política de Privacidade
+              </Link>
+              <Link className="quem-somos-link" to="/termos-e-condicoes">
+                Termos e Condições
+              </Link>
+              <Link className="quem-somos-link" to="/contato">
+                Contato
+              </Link>
+            </div>
           </div>
           <div className="quem-somos-text">{selected.text}</div>
         </div>

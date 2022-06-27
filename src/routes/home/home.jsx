@@ -5,6 +5,7 @@ import Header from "../../routes/header/header";
 import Slider from "../../components/slider/slider";
 import Plans from "../../components/plans/plans";
 import CTA from "../../components/cta/cta";
+import Delivery from "../../components/delivery/delivery";
 import HowItWorks from "../../components/how-it-works/how-it-works";
 
 import Footer from "../../components/footer/footer";
@@ -20,6 +21,7 @@ const Home = () => {
       </div>
       <Slider />
       <Plans />
+      <Delivery />
       <CTA />
       {/*<HowItWorks />*/}
 

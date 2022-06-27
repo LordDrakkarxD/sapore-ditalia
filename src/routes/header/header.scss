@@ -13,6 +13,34 @@
 
   animation: fadeIn 1.25s ease-in-out;
 
+  .header-logo-link {
+    margin-right: 4rem;
+
+    .header-logo {
+      height: 8rem;
+    }
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 12rem;
+
+    // padding: 0 4.8rem;
+
+    background-color: rgba(13, 14, 16, 0.8);
+
+    animation: moveDown 1.25s ease-in-out;
+  }
+
+  &.sticky + .hero-container {
+    padding-top: 12rem;
+  }
+
   .btn-mobile-nav {
     border: none;
     background: none;
@@ -37,22 +65,6 @@
       display: none;
     }
   }
-
-  // &.sticky {
-  //   position: fixed;
-  //   top: 0;
-  //   bottom: 0;
-
-  //   width: 100%;
-
-  //   height: 12rem;
-
-  //   padding: 0 4.8rem;
-
-  //   background-color: rgba(13, 14, 16, 0.8);
-
-  //   animation: moveDown 1.25s ease-in-out;
-  // }
 
   @keyframes fadeIn {
     from {
@@ -89,25 +101,6 @@
       transform: rotate(0);
     }
   }
-
-  // &.sticky + .hero-container {
-  //   padding-top: 12rem;
-  // }
-
-  // .cart-container {
-  //   height: calc(100vh - 80px);
-  // }
-
-  // .nav-buttons {
-  //   display: flex;
-  //   align-items: center;
-  //   column-gap: 12px;
-  // }
-
-  // .logo {
-  //   max-height: 10rem;
-  //   height: 100%;
-  // }
 }
 
 @media (max-width: 59em) {
