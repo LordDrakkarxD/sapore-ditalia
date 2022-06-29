@@ -7,7 +7,7 @@ import Plans from "../../components/plans/plans";
 import CTA from "../../components/cta/cta";
 import Delivery from "../../components/delivery/delivery";
 import HowItWorks from "../../components/how-it-works/how-it-works";
-
+import SobreNos from "../../components/sobre-nos/sobre-nos";
 import Footer from "../../components/footer/footer";
 
 import "./home.scss";
@@ -15,11 +15,13 @@ import "./home.scss";
 const Home = () => {
   return (
     <div className="home-container">
-      <div className="header-content">
+      <Hero />
+      {/*<div className="header-content">
         <Header />
         <Hero />
-      </div>
-      <Slider />
+  </div>*/}
+      {/*<Slider />*/}
+      <SobreNos />
       <Plans />
       <Delivery />
       <CTA />

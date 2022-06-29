@@ -1,6 +1,8 @@
 .section-plans-container {
   padding: 9.6rem 0;
 
+  background-color: #fff;
+
   .plans-heading-container {
     /* 1140px */
     max-width: 120rem;
@@ -15,7 +17,9 @@
 
       margin-bottom: 9.6rem;
 
-      color: #fff;
+      //color: #fff;
+
+      color: #000;
 
       letter-spacing: -0.5px;
     }

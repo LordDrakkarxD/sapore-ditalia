@@ -19,11 +19,11 @@ const NavBar = ({ sticky }) => {
       <NavHashLink
         className="nav-bar-link"
         smooth
-        to="/#slider"
+        to="/#section-cta"
         activeClassName="active"
         activeStyle={{ color: "#ffd700" }}
       >
-        Promos
+        Rosticeria
       </NavHashLink>
       <NavHashLink
         className="nav-bar-link"
@@ -32,7 +32,7 @@ const NavBar = ({ sticky }) => {
         activeClassName="active"
         activeStyle={{ color: "#ffd700" }}
       >
-        Kits
+        Enoteca
       </NavHashLink>
       <NavHashLink
         className="nav-bar-link"
@@ -43,18 +43,6 @@ const NavBar = ({ sticky }) => {
       >
         Delivery
       </NavHashLink>
-      <NavHashLink
-        className="nav-bar-link"
-        smooth
-        to="/#section-cta"
-        activeClassName="active"
-        activeStyle={{ color: "#ffd700" }}
-      >
-        Rosticeria
-      </NavHashLink>
-      {/*<Link className="nav-bar-link" to="/shop">
-      Peca Ja
-</Link>*/}
 
       <Link className="nav-bar-link" to="/quem-somos">
         Quem Somos

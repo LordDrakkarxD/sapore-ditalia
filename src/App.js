@@ -18,24 +18,24 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Header />} />
-        <Route index element={<Home />} />
-        <Route path="shop" element={<Shop />} />
-        <Route path="payment" element={<Payment />} />
-        <Route path="checkout" element={<Checkout />} />
-        <Route path="signin" element={<Authentication />} />
-        <Route path="quem-somos" element={<QuemSomos title="Quem Somos" />} />
-        <Route path="seguranca" element={<QuemSomos title="Segurança" />} />
-        <Route
-          path="politica-de-privacidade"
-          element={<QuemSomos title="Política de Privacidade" />}
-        />
-        <Route
-          path="termos-e-condicoes"
-          element={<QuemSomos title="Termos e Condições" />}
-        />
-        <Route path="contato" element={<QuemSomos title="Contato" />} />
-        {/*
+        <Route path="/" element={<Header />}>
+          <Route index element={<Home />} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="payment" element={<Payment />} />
+          <Route path="checkout" element={<Checkout />} />
+          <Route path="signin" element={<Authentication />} />
+          <Route path="quem-somos" element={<QuemSomos title="Quem Somos" />} />
+          <Route path="seguranca" element={<QuemSomos title="Segurança" />} />
+          <Route
+            path="politica-de-privacidade"
+            element={<QuemSomos title="Política de Privacidade" />}
+          />
+          <Route
+            path="termos-e-condicoes"
+            element={<QuemSomos title="Termos e Condições" />}
+          />
+          <Route path="contato" element={<QuemSomos title="Contato" />} />
+          {/*
             <Route
               path="signup"
               element={
@@ -49,6 +49,7 @@ const App = () => {
               }
             />
             */}
+        </Route>
       </Routes>
     </div>
   );

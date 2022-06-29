@@ -57,7 +57,12 @@ body {
 
   width: 100%;
 
-  background-color: #0d0e10;
+  //background-color: #0d0e10;
+  //background-image: url(./assets/Fundo.jpg);
+
+  background: no-repeat url(./assets/bg.webp) center center;
+
+  background-size: cover;
 }
 
 a {

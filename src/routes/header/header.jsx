@@ -53,11 +53,9 @@ const Header = () => {
           navOpen ? "nav-open" : ""
         }`}
       >
-        {stickyClass === "sticky" && (
-          <Link className="header-logo-link" to="/">
-            <img className="header-logo" src={DItaliaLogo} alt="Logo" />
-          </Link>
-        )}
+        <Link className="header-logo-link" to="/">
+          <img className="header-logo" src={DItaliaLogo} alt="Logo" />
+        </Link>
         <NavBar />
         <button className="btn-mobile-nav" onClick={toggleNav}>
           <FontAwesomeIcon
