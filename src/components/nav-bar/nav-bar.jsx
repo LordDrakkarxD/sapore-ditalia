@@ -23,7 +23,7 @@ const NavBar = ({ sticky }) => {
         activeClassName="active"
         activeStyle={{ color: "#ffd700" }}
       >
-        Rosticeria
+        Rosticceria
       </NavHashLink>
       <NavHashLink
         className="nav-bar-link"

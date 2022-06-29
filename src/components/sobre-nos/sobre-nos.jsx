@@ -1,4 +1,4 @@
-import videoSapore from "../../assets/video/production.mp4";
+import videoSapore from "../../assets/video/tomato-reduced.mp4";
 
 import "./sobre-nos.scss";
 
@@ -7,11 +7,11 @@ const SobreNos = () => {
     <div className="section-sobre-nos">
       <div className="sobre-nos-container">
         <div className="sobre-nos-video">
-          <video src={videoSapore} autoPlay loop muted />
+          {/*<video src={videoSapore} autoPlay loop muted />*/}
+          <video src="https://i.imgur.com/8qLqddO.mp4" autoPlay loop muted />
         </div>
         <div className="sobre-nos-text">
           <h1>Quem Somos</h1>
-
           <p>
             Massas leves, macias e delicadas, todas recheadas de modo artesanal
             com ingredientes selecionados, tudo supervisionado por uma
