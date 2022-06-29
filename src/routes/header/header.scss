@@ -4,6 +4,8 @@
   justify-content: space-between;
 
   height: 12rem;
+  width: 100vw;
+  max-width: 100%;
 
   padding: 0 6rem;
 
@@ -14,6 +16,7 @@
   animation: fadeIn 1.25s ease-in-out;
 
   //background-color: #fff;
+  background-color: #712a04;
 
   .header-logo-link {
     margin-right: 4rem;
@@ -37,6 +40,12 @@
     background-color: rgba(13, 14, 16, 0.8);
 
     animation: moveDown 1.25s ease-in-out;
+
+    .nav-bar-container {
+      .nav-bar-link {
+        color: #fff;
+      }
+    }
   }
 
   &.sticky + .hero-container {

@@ -7,7 +7,9 @@ import Header from "./routes/header/header";
 import Shop from "./routes/shop/shop";
 import Checkout from "./routes/checkout/checkout";
 import Payment from "./routes/payment/payment";
-import QuemSomos from "./routes/quem-somos/quem-somos";
+import Institucional from "./routes/institucional/institucional";
+import Rosticeria from "./routes/rosticeria/rosticeria";
+import Enoteca from "./routes/enoteca/enoteca";
 
 import { UserContext } from "./contexts/user";
 
@@ -24,17 +26,29 @@ const App = () => {
           <Route path="payment" element={<Payment />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="signin" element={<Authentication />} />
-          <Route path="quem-somos" element={<QuemSomos title="Quem Somos" />} />
-          <Route path="seguranca" element={<QuemSomos title="Segurança" />} />
+          <Route path="rosticceria" element={<Rosticeria />} />
+          <Route path="enoteca" element={<Enoteca />} />
           <Route
-            path="politica-de-privacidade"
-            element={<QuemSomos title="Política de Privacidade" />}
+            path="institucional/quem-somos"
+            element={<Institucional title="Quem Somos" />}
           />
           <Route
-            path="termos-e-condicoes"
-            element={<QuemSomos title="Termos e Condições" />}
+            path="institucional/seguranca"
+            element={<Institucional title="Segurança" />}
           />
-          <Route path="contato" element={<QuemSomos title="Contato" />} />
+          <Route
+            path="institucional/politica-de-privacidade"
+            element={<Institucional title="Política de Privacidade" />}
+          />
+          <Route
+            path="institucional/termos-e-condicoes"
+            element={<Institucional title="Termos e Condições" />}
+          />
+          <Route
+            path="institucional/contato"
+            element={<Institucional title="Contato" />}
+          />
+
           {/*
             <Route
               path="signup"

@@ -1,4 +1,6 @@
-import videoSapore from "../../assets/video/tomato-reduced.mp4";
+import { Link } from "react-router-dom";
+
+import EnotecaImage from "../../assets/vinho.png";
 
 import "./sobre-nos.scss";
 
@@ -7,11 +9,10 @@ const SobreNos = () => {
     <div className="section-sobre-nos">
       <div className="sobre-nos-container">
         <div className="sobre-nos-video">
-          {/*<video src={videoSapore} autoPlay loop muted />*/}
           <video src="https://i.imgur.com/8qLqddO.mp4" autoPlay loop muted />
         </div>
         <div className="sobre-nos-text">
-          <h1>Quem Somos</h1>
+          <h1>Por que Nós?</h1>
           <p>
             Massas leves, macias e delicadas, todas recheadas de modo artesanal
             com ingredientes selecionados, tudo supervisionado por uma
@@ -35,6 +36,20 @@ const SobreNos = () => {
             delicado e com um aroma delicioso.
           </p>
           <p>&nbsp;</p>
+        </div>
+      </div>
+      <div className="enoteca-container">
+        <div className="enoteca-text">
+          <h1 className="enoteca-heading">Enoteca</h1>
+          <span className="enoteca-description">
+            Descubra os prazeres da combinação de uma boa massa com um bom
+            vinho.
+          </span>
+          <button className="enoteca-button">
+            <Link className="enoteca-link" to="/enoteca">
+              <span>Saiba Mais</span>
+            </Link>
+          </button>
         </div>
       </div>
     </div>
