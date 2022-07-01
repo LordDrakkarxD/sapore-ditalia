@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 
-import Tomato from "https://i.imgur.com/gWCE33c.mp4";
-
 import "./sobre-nos.scss";
 
 const SobreNos = () => {
@@ -9,7 +7,7 @@ const SobreNos = () => {
     <div className="section-sobre-nos">
       <div className="sobre-nos-container">
         <div className="sobre-nos-video">
-          <video src={Tomato} autoPlay loop muted />
+          <video src="https://i.imgur.com/gWCE33c.mp4" autoPlay loop muted />
         </div>
         <div className="sobre-nos-text">
           <h1>Paixão</h1>
