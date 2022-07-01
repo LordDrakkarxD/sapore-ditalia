@@ -8,7 +8,6 @@ import CTA from "../../components/cta/cta";
 import Delivery from "../../components/delivery/delivery";
 import HowItWorks from "../../components/how-it-works/how-it-works";
 import SobreNos from "../../components/sobre-nos/sobre-nos";
-import Footer from "../../components/footer/footer";
 
 import "./home.scss";
 
@@ -26,8 +25,6 @@ const Home = () => {
 <Delivery />*/}
       {/* <CTA />*/}
       {/*<HowItWorks />*/}
-
-      <Footer />
       <Outlet />
     </div>
   );

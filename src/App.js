@@ -10,6 +10,8 @@ import Payment from "./routes/payment/payment";
 import Institucional from "./routes/institucional/institucional";
 import Rosticeria from "./routes/rosticeria/rosticeria";
 import Enoteca from "./routes/enoteca/enoteca";
+import Footer from "./components/footer/footer";
+import Contato from "./routes/contato/contato";
 
 import { UserContext } from "./contexts/user";
 
@@ -33,21 +35,14 @@ const App = () => {
             element={<Institucional title="Quem Somos" />}
           />
           <Route
-            path="institucional/seguranca"
-            element={<Institucional title="Segurança" />}
+            path="institucional/delivery"
+            element={<Institucional title="Delivery" />}
           />
           <Route
             path="institucional/politica-de-privacidade"
             element={<Institucional title="Política de Privacidade" />}
           />
-          <Route
-            path="institucional/termos-e-condicoes"
-            element={<Institucional title="Termos e Condições" />}
-          />
-          <Route
-            path="institucional/contato"
-            element={<Institucional title="Contato" />}
-          />
+          <Route path="contato" element={<Contato />} />
 
           {/*
             <Route
@@ -65,6 +60,7 @@ const App = () => {
             */}
         </Route>
       </Routes>
+      <Footer />
     </div>
   );
 };

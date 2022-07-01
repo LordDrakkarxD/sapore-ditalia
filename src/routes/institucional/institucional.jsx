@@ -1,13 +1,11 @@
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-import Footer from "../../components/footer/footer";
-
 import "./institucional.scss";
 
 const select = [
   {
-    title: "Segurança",
+    title: "Delivery",
     text: (
       <div>
         <p></p>
@@ -80,22 +78,6 @@ const select = [
     ),
   },
   {
-    title: "Termos e Condições",
-    text: (
-      <div>
-        <p></p>
-        <p className="quem-somos-a">
-          O Clube de Assinaturas CLUBE MASSA, razão social CATHERINE GRAZIELLE
-          FRANKE, inscrita no CNPJ 26.084.714/0001-19, localizada na AV Dom
-          Pedro Segundo 655 – Centro – Presidente Venceslau-SP, a todos os
-          clientes pessoa física e jurídica, será regido pelas disposições do
-          presente documento (“Termos e Condições”).
-        </p>
-        <p></p>
-      </div>
-    ),
-  },
-  {
     title: "Política de Privacidade",
     text: (
       <div>
@@ -134,22 +116,16 @@ const Institucional = ({ title }) => {
               <Link className="quem-somos-link" to="/institucional/quem-somos">
                 Quem Somos
               </Link>
-              <Link className="quem-somos-link" to="/institucional/seguranca">
-                Segurança
-              </Link>
               <Link
                 className="quem-somos-link"
                 to="/institucional/politica-de-privacidade"
               >
                 Política de Privacidade
               </Link>
-              <Link
-                className="quem-somos-link"
-                to="/institucional/termos-e-condicoes"
-              >
-                Termos e Condições
+              <Link className="quem-somos-link" to="/institucional/delivery">
+                Delivery
               </Link>
-              <Link className="quem-somos-link" to="/institucional/contato">
+              <Link className="quem-somos-link" to="/contato">
                 Contato
               </Link>
             </div>
@@ -157,7 +133,6 @@ const Institucional = ({ title }) => {
           <div className="quem-somos-text">{selected.text}</div>
         </div>
       </div>
-      <Footer />
     </Fragment>
   );
 };

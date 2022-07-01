@@ -11,13 +11,16 @@ const Hero = () => {
     <div className="hero-container">
       <video src="https://i.imgur.com/k3E7t5I.mp4" autoPlay loop muted />
       <div className="hero-text">
-        <h1 className="hero-heading">4 anos de tradição</h1>
+        <h1 className="hero-heading">Sapore D Italia</h1>
         <span className="hero-description">
-          Oferecendo massas com o mesmo cuidado artesanal, sofisticação de
-          ingredientes e criatividade gastronômica.
+          Especialista em massas e molhos frescos feitos artesanalmente.
         </span>
         <button className="hero-button">
-          <Link className="hero-link" to="/rosticceria">
+          <Link
+            className="hero-link"
+            to="/rosticceria"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <span>Saiba Mais</span>
           </Link>
         </button>

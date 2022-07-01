@@ -45,6 +45,7 @@ const Footer = () => {
             <div className="social-links">
               <Link
                 className="social-link facebook"
+                aria-label="facebook"
                 to="#"
                 onClick={(e) => {
                   window.open(
@@ -62,6 +63,7 @@ const Footer = () => {
               </Link>
               <Link
                 className="social-link instagram"
+                aria-label="instagram"
                 to="#"
                 onClick={(e) => {
                   window.open(
@@ -96,6 +98,7 @@ const Footer = () => {
           </Link>*/}
               <Link
                 className="social-link whatsapp"
+                aria-label="whatsapp"
                 to="#"
                 onClick={(e) => {
                   window.open(
@@ -113,6 +116,7 @@ const Footer = () => {
               </Link>
               <Link
                 className="social-link email"
+                aria-label="email"
                 to="#"
                 onClick={(e) => {
                   window.location = "mailto:contato@saporediitalia.com.br";
@@ -137,36 +141,22 @@ const Footer = () => {
             </div>
           </div>
           <div className="nav-container">
-            <p className="nav-heading">Dúvidas</p>
-            <div className="footer-nav">
-              {currentUser && (
-                <Link className="footer-link" to="/account/orders">
-                  Meus Pedidos
-                </Link>
-              )}
-
-              <Link className="footer-link" to="/como-comprar">
-                Como Comprar
-              </Link>
-              <Link className="footer-link" to="/termos-e-condicoes">
-                Termos e Condições
-              </Link>
-              <Link className="footer-link" to="/entrega">
-                Entrega
-              </Link>
-            </div>
-          </div>
-          <div className="nav-container">
             <p className="nav-heading">Institucional</p>
             <div className="footer-nav">
-              <Link className="footer-link" to="/quem-somos">
+              <Link className="footer-link" to="/institucional/quem-somos">
                 Quem Somos
               </Link>
-              <Link className="footer-link" to="/seguranca">
+              {/*<Link className="footer-link" to="/institucional/seguranca">
                 Segurança
-              </Link>
-              <Link className="footer-link" to="/politica-de-privacidade">
+          </Link>*/}
+              <Link
+                className="footer-link"
+                to="/institucional/politica-de-privacidade"
+              >
                 Política de Privacidade
+              </Link>
+              <Link className="footer-link" to="/institucional/delivery">
+                Delivery
               </Link>
               <Link className="footer-link" to="/contato">
                 Contato
@@ -178,11 +168,11 @@ const Footer = () => {
             <div className="footer-cards-nav">
               <img src={VisaIcon} className="footer-card" alt="Boleto" />
               <img src={MasterCardIcon} className="footer-card" alt="Boleto" />
-              <img src={AmexIcon} className="footer-card" alt="Boleto" />
+              {/*<img src={AmexIcon} className="footer-card" alt="Boleto" />
               <img src={DinersIcon} className="footer-card" alt="Boleto" />
-              <img src={HyperCardIcon} className="footer-card" alt="Boleto" />
+              <img src={HyperCardIcon} className="footer-card" alt="Boleto" /*/}
               <img src={EloIcon} className="footer-card" alt="Boleto" />
-              <img src={BoletoIcon} className="footer-card" alt="Boleto" />
+              {/*<img src={BoletoIcon} className="footer-card" alt="Boleto" />*/}
               <img src={PIXIcon} className="footer-card" alt="Boleto" />
             </div>
           </div>

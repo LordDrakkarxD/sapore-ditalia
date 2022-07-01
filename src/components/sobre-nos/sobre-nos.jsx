@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import EnotecaImage from "../../assets/vinho.png";
+import Tomato from "../../assets/videos/tomato.mp4";
 
 import "./sobre-nos.scss";
 
@@ -9,36 +9,39 @@ const SobreNos = () => {
     <div className="section-sobre-nos">
       <div className="sobre-nos-container">
         <div className="sobre-nos-video">
-          <video src="https://i.imgur.com/8qLqddO.mp4" autoPlay loop muted />
+          <video src={Tomato} autoPlay loop muted />
         </div>
         <div className="sobre-nos-text">
-          <h1>Por que Nós?</h1>
+          <h1>Paixão</h1>
           <p>
-            Massas leves, macias e delicadas, todas recheadas de modo artesanal
-            com ingredientes selecionados, tudo supervisionado por uma
-            nutricionista que se preocupa com a qualidade alimentar em todo
-            processo de fabricação.
+            Cada criação é tratada como uma obra única desenhada com carinho.
           </p>
           <p>&nbsp;</p>
           <p>
-            São pré-cozidas e muito fáceis de preparar, se preferir pode receber
-            o produto congelado garantindo uma maior validade, para ter sempre a
-            mão aquela “ajudinha” na hora de preparar uma refeição saborosa.
+            Elevamos a definição de "massa" a um nível nunca explorado, cada
+            item exala sofisticação.
           </p>
           <p>&nbsp;</p>
           <p>
-            Nós, da Sapore di Italia, adoramos massa, mas também consideramos o
-            molho parte fundamental para que essa massa fique saborosa e
-            completa, daí a dedicação no preparo artesanal de molhos com os
-            melhores ingredientes. Os tomates são descascados individualmente e
-            retirada as sementes para que não fique ácido, acrescentando
-            temperos e especiarias e como resultado temos um molho leve,
-            delicado e com um aroma delicioso.
+            Fazemos a fusão das tradições centenárias da família italiana com
+            todas as inovações da culinária contemporânea unindo o antigo ao
+            novo para criar uma experiência de encantamento inesperado para o
+            paladar.
           </p>
           <p>&nbsp;</p>
+          <p>
+            Nosso trabalho se destaca pela qualidade dos ingredientes, o cuidado
+            na preparação e sofisticação nos sabores.
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            Nossos recheios se apresentam sutilmente, surpreendendo a cada
+            nuance, tomando forma lentamente em uma experiência sensorial
+            inesquecível.
+          </p>
         </div>
       </div>
-      <div className="enoteca-container">
+      <div className="enoteca-preview-container">
         <div className="enoteca-text">
           <h1 className="enoteca-heading">Enoteca</h1>
           <span className="enoteca-description">
@@ -46,7 +49,11 @@ const SobreNos = () => {
             vinho.
           </span>
           <button className="enoteca-button">
-            <Link className="enoteca-link" to="/enoteca">
+            <Link
+              className="enoteca-link"
+              to="/enoteca"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               <span>Saiba Mais</span>
             </Link>
           </button>

@@ -1,0 +1,202 @@
+.section-enoteca {
+  display: flex;
+  flex-direction: column;
+
+  padding: 8.4rem 0;
+
+  padding-top: 0;
+
+  .enoteca-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8.4rem;
+
+    .enoteca-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100vw;
+      max-width: 100%;
+      height: 30vh;
+
+      background: url("../../assets/Banner_Enoteca_1.jpg") right center;
+
+      background-attachment: fixed;
+      background-size: cover;
+
+      // background: no-repeat url("../../assets/Banner_Enoteca_1.jpg") center
+      //   center;
+
+      // background-size: cover;
+
+      span {
+        font-size: 5rem;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+
+    .enoteca-vinhos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 90vw;
+      height: 600px;
+
+      margin: 0 auto;
+
+      border: 3px solid #ffd700;
+
+      border-radius: 11px;
+
+      overflow: hidden;
+
+      .enoteca-vinhos-image {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: left center;
+        }
+      }
+
+      .enoteca-vinhos-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        width: calc(100% - 12.8rem);
+        height: 100%;
+        background-color: #712a04;
+
+        padding: 12rem 6.4rem;
+
+        h1 {
+          font-size: 4rem;
+          font-weight: 700;
+          color: #fff;
+
+          margin-bottom: 3.6rem;
+        }
+
+        p {
+          font-size: 2rem;
+          line-height: 1.2;
+          color: #fff;
+        }
+      }
+    }
+
+    .enoteca-harmonia {
+      display: flex;
+      flex-direction: column;
+
+      gap: 10rem;
+
+      .harmonia-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 2rem;
+
+        color: #333;
+
+        text-align: center;
+
+        .harmonia-heading {
+          font-size: 4rem;
+          font-weight: 700;
+          color: #712a04;
+        }
+        .harmonia-text {
+          font-size: 2rem;
+          line-height: 1.2;
+        }
+      }
+
+      .harmonia-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        //border: 3px solid #ffd700;
+
+        //border-radius: 11px;
+
+        overflow: hidden;
+
+        gap: 4rem;
+
+        .harmonia-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 90vw;
+          height: 600px;
+
+          margin: 0 auto;
+
+          .harmonia-item-image {
+            width: 100%;
+            height: 100%;
+
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: left center;
+
+              transition: all 0.7s ease;
+
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+
+          .harmonia-item-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            width: calc(100% - 12.8rem);
+            height: 100%;
+            //background-color: #fff;
+
+            padding: 12rem 6.4rem;
+
+            h1 {
+              font-size: 4rem;
+              font-weight: 700;
+              color: #712a04;
+
+              margin-bottom: 3.6rem;
+            }
+
+            p {
+              font-size: 2rem;
+              line-height: 1.2;
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+}
