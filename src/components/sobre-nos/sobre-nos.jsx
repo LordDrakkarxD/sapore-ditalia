@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import Tomato from "../../assets/videos/tomato.mp4";
+import Tomato from "https://i.imgur.com/gWCE33c.mp4";
 
 import "./sobre-nos.scss";
 
