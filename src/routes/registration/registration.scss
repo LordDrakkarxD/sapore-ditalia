@@ -1,0 +1,41 @@
+.section-registration {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 12rem;
+
+  .registration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12rem;
+
+    .registration-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100vw;
+      max-width: 100%;
+      height: 30vh;
+
+      background: url("../../assets/pasta.jpg") center;
+
+      background-attachment: fixed;
+      background-size: cover;
+
+      // background: no-repeat url("../../assets/Banner_rosticeria_1.jpg") center
+      //   center;
+
+      // background-size: cover;
+
+      span {
+        font-size: 5rem;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+  }
+}

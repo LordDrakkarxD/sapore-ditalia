@@ -1,0 +1,273 @@
+.section-cardapio-gourmet {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 8.4rem;
+
+  .cardapio-gourmet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8.4rem;
+
+    .cardapio-gourmet-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100vw;
+      max-width: 100%;
+      height: 30vh;
+
+      background: url("../../assets/pasta.jpg") center;
+
+      background-attachment: fixed;
+      background-size: cover;
+
+      span {
+        font-size: 5rem;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+
+    .cardapio-gourmet-pratos {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+
+      border-bottom: 5px solid #712a04;
+
+      //background: url("../../assets/cardapio.png"), url("../../assets/bg.webp");
+
+      background: url("../../assets/cardapio.png"), #fefcf6;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      gap: 5px;
+
+      .dicas-item-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+
+        // width: calc(100% - 12.8rem);
+        // height: 100%;
+        //background-color: #fff;
+
+        padding: 2.5rem 6.4rem;
+
+        h1 {
+          font-size: 3.4rem;
+          font-weight: 700;
+          color: #712a04;
+
+          text-transform: uppercase;
+
+          margin-bottom: 0.9rem;
+
+          text-align: center;
+        }
+
+        p {
+          font-size: 2rem;
+          line-height: 1.2;
+          font-weight: 400;
+          color: #712a04;
+          text-transform: uppercase;
+        }
+
+        .pratos-item-desc {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .pratos-item-name {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+              text-align: center;
+            }
+
+            span {
+              font-size: 1.6rem;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    // .cardapio-pratos {
+    //   display: flex;
+    //   flex-direction: column;
+
+    //   gap: 10rem;
+
+    //   .pratos-header {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     justify-content: center;
+
+    //     gap: 2rem;
+
+    //     color: #333;
+
+    //     text-align: center;
+
+    //     .pratos-heading {
+    //       font-size: 4rem;
+    //       font-weight: 700;
+    //       color: #712a04;
+    //     }
+    //     .pratos-text {
+    //       font-size: 2rem;
+    //       line-height: 1.2;
+    //     }
+    //   }
+
+    //   .dicas-items {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     justify-content: center;
+
+    //     //border: 3px solid #ffd700;
+
+    //     //border-radius: 11px;
+
+    //     overflow: hidden;
+
+    //     gap: 4rem;
+
+    //     .dicas-item {
+    //       display: flex;
+    //       align-items: center;
+    //       justify-content: center;
+
+    //       width: 90vw;
+    //       height: 1000px;
+
+    //       margin: 0 auto;
+
+    //       .dicas-item-image {
+    //         width: 100%;
+    //         height: 100%;
+
+    //         overflow: hidden;
+
+    //         img {
+    //           width: 100%;
+    //           height: 100%;
+    //           object-fit: cover;
+    //           object-position: left center;
+
+    //           transition: all 0.7s ease;
+
+    //           &:hover {
+    //             transform: scale(1.1);
+    //           }
+    //         }
+    //       }
+
+    //       .dicas-item-text {
+    //         display: flex;
+    //         flex-direction: column;
+    //         //align-items: flex-start;
+    //         justify-content: flex-start;
+    //         gap: 10px;
+
+    //         width: calc(100% - 12.8rem);
+    //         height: 100%;
+    //         //background-color: #fff;
+
+    //         padding: 12rem 6.4rem;
+
+    //         h1 {
+    //           font-size: 4rem;
+    //           font-weight: 700;
+    //           color: #712a04;
+
+    //           margin-bottom: 3.6rem;
+
+    //           text-align: center;
+    //         }
+
+    //         p {
+    //           font-size: 1.4rem;
+    //           line-height: 1.2;
+    //           color: #333;
+    //           text-transform: uppercase;
+    //         }
+
+    //         .pratos-item-desc {
+    //           display: flex;
+    //           justify-content: space-between;
+    //           align-items: center;
+
+    //           .pratos-item-name {
+    //             span {
+    //               font-size: 1rem;
+    //               font-weight: 400;
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+  }
+
+  .cardapio-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4rem;
+    color: #712a04;
+    text-transform: uppercase;
+    padding: 1rem 0;
+
+    border-bottom: 5px solid #712a04;
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 1rem;
+
+        font-size: 1.6rem;
+        color: #333;
+        transition: all 0.7s;
+
+        &.whatsapp {
+          .social-icon {
+            width: 3.1rem;
+          }
+        }
+
+        .social-icon {
+          height: 100%;
+          width: 3rem;
+        }
+
+        span {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}

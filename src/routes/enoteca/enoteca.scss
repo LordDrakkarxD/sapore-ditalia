@@ -93,6 +93,16 @@
           line-height: 1.2;
           color: #fff;
         }
+
+        .cardapio-link {
+          color: #ffd700;
+          transition: all 1s ease;
+
+          &:active,
+          &:hover {
+            color: #b39700;
+          }
+        }
       }
     }
 
@@ -150,14 +160,15 @@
           margin: 0 auto;
 
           .harmonia-item-image {
-            width: 100%;
             height: 100%;
+            width: 100%;
 
             overflow: hidden;
 
             img {
               width: 100%;
               height: 100%;
+
               object-fit: cover;
               object-position: left center;
 

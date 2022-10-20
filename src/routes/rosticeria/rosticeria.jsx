@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 import Salada from "../../assets/salad.jpg";
 import Carne from "../../assets/meat.jpg";
 import Peixe from "../../assets/fish.jpg";
 import Pasta from "../../assets/ragu-5.jpg";
 
-import EnotecaVinhos from "../../assets/Enoteca-vinhos.jpg";
+import Menu from "../../assets/cardapio/cardapio.pdf";
 
 import "./rosticeria.scss";
 
@@ -12,7 +14,7 @@ const Rosticeria = () => {
     <div className="section-rosticeria">
       <div className="rosticeria-container">
         <div className="rosticeria-header">
-          <span>Rosticceria</span>
+          <span>Rotisserie</span>
         </div>
         <div className="rosticeria-meals">
           <div className="rosticeria-meals-text">
@@ -23,12 +25,29 @@ const Rosticeria = () => {
             </p>
             <p>&nbsp;</p>
             <p>
-              Lembrando que estamos com vocês para todas as datas celebrativas
-              como: Páscoa, Natal, Pessah, Dia das Mães, Dia dos Pais… e
-              recomendamos fazer as encomendas com antecedência!
+              Caso você prefira, vá diretamente à loja, assim os nossos
+              atendentes poderão atendê-lo e fazer sugestões para deixá-lo
+              satisfeito. Além disso, nosso sommelier poderá dar boas sugestões
+              para harmonizar os vinhos com o cardápio escolhido.
             </p>
             <p>&nbsp;</p>
-            <p>Confira nosso cardápio.</p>
+            <p>
+              Lembrando que estamos com vocês em todas as datas comemorativas
+              como: Páscoa, Natal, Dia das Mães, Dia dos Pais… e sugerimos fazer
+              as encomendas com antecedência!!
+            </p>
+            <p>&nbsp;</p>
+            <p>
+              Confira nosso{" "}
+              <a
+                href={Menu}
+                className="cardapio-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>cardápio.</span>
+              </a>
+            </p>
           </div>
           <div className="rosticeria-meals-image">
             <img src={Pasta} alt="pasta" />
@@ -38,8 +57,8 @@ const Rosticeria = () => {
           <div className="dicas-header">
             <span className="dicas-heading">Dicas de Preparo</span>
             <span className="dicas-text">
-              Preparamos algumas dicas simples e práticas para que você tenha
-              uma excelente refeição.
+              Preparamos algumas dicas simples e práticas para você tenha uma
+              excelente refeição.
             </span>
           </div>
           <div className="dicas-items">
@@ -52,26 +71,26 @@ const Rosticeria = () => {
                 <p>
                   Sempre deverão ser guardadas no refrigerador até a hora de
                   servir. As saladas de alcachofra, berinjela assada e muitas
-                  outras da Paola podem ser servidas junto com saladas de folhas
-                  para enriquecer ainda mais a mesa.
+                  outras podem ser servidas junto com saladas de folhas para
+                  enriquecer ainda mais a mesa.
                 </p>
               </div>
             </div>
             <div className="dicas-item">
               <div className="dicas-item-text">
-                <h1>Carnes e Aves ao Molho</h1>
+                <h1>Carnes e Aves com Molho</h1>
                 <p>
                   Levar ao forno pré aquecido à 150°C durante uns 15 a 20
                   minutos e coberto com papel de alumínio.
                 </p>
               </div>
               <div className="dicas-item-image">
-                <img src={Carne} alt="example" />
+                <img src="https://i.imgur.com/IAO1Qfx.jpg" alt="example" />
               </div>
             </div>
             <div className="dicas-item">
               <div className="dicas-item-image">
-                <img src={Peixe} alt="example" />
+                <img src="https://i.imgur.com/2W2sjXr.jpg" alt="example" />
               </div>
               <div className="dicas-item-text">
                 <h1>Peixes</h1>
@@ -117,6 +136,20 @@ const Rosticeria = () => {
               não seja recomendado o uso de microondas para aquecer e cozinhar
               massas, em alguns casos pode ser uma opção em função da
               praticidade e da rapidez.
+            </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>
+              Confira nosso{" "}
+              <a
+                href={Menu}
+                className="cardapio-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>cardápio.</span>
+              </a>
             </p>
           </div>
           <div className="rosticeria-massas-image"></div>

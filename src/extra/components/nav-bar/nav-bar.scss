@@ -1,0 +1,43 @@
+.nav-bar-container {
+  display: flex;
+  align-items: center;
+
+  column-gap: 4rem;
+
+  z-index: 9999;
+
+  &.sticky {
+    .nav-bar-link {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #fff;
+
+      transition: all 0.4s;
+
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        color: #ffd700;
+        transform: translateY(0.5rem);
+      }
+    }
+  }
+
+  .nav-bar-link {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+
+    transition: all 0.5s ease;
+
+    text-decoration: none;
+    border: none;
+
+    &:hover,
+    &:active {
+      color: #ffd700;
+      transform: translateY(5px);
+    }
+  }
+}

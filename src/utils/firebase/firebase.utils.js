@@ -4,10 +4,16 @@ import {
   signInWithRedirect,
   signInWithPopup,
   GoogleAuthProvider,
+  FacebookAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+  updateProfile,
+  updatePassword,
+  sendEmailVerification,
+  sendPasswordResetEmail,
+  confirmPasswordReset,
 } from "firebase/auth";
 import {
   getFirestore,
@@ -38,15 +44,25 @@ const firebaseApp = initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
 
+const facebookProvider = new FacebookAuthProvider();
+
+facebookProvider.setCustomParameters({
+  prompt: "select_account",
+});
+
 googleProvider.setCustomParameters({
   prompt: "select_account",
 });
 
 export const auth = getAuth();
+
 export const signInWithGooglePopup = () =>
   signInWithPopup(auth, googleProvider);
 export const signInWithGoogleRedirect = () =>
   signInWithRedirect(auth, googleProvider);
+
+export const signInWithFacebookPopup = () =>
+  signInWithPopup(auth, facebookProvider);
 
 export const db = getFirestore();
 
@@ -121,6 +137,35 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
 
   return await signInWithEmailAndPassword(auth, email, password);
+};
+
+export const modifyDocumentInformation = async (
+  userAuth,
+  additionalInformation = {}
+) => {
+  const userDocRef = doc(db, "users", userAuth.uid);
+
+  try {
+    await setDoc(userDocRef, {
+      ...additionalInformation,
+    });
+  } catch (error) {
+    console.log("error modifying the user", error.message);
+  }
+};
+
+export const retrieveDocumentInformation = async (userAuth) => {
+  const userDocRef = doc(db, "users", userAuth.uid);
+
+  const userSnapshot = await getDoc(userDocRef);
+
+  if (!userSnapshot.exists) return;
+
+  return userSnapshot.data();
+};
+
+export const sendOutEmailVerification = async (userAuth) => {
+  await sendEmailVerification(userAuth);
 };
 
 export const signOutUser = async () => await signOut(auth);

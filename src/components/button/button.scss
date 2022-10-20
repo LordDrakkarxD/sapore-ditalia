@@ -1,12 +1,12 @@
 .button-container {
   min-width: 165px;
-  width: auto;
+  width: 100%;
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 15px;
-  background-color: black;
+  padding: 0 0 0 0;
+  font-size: 12px;
+  background-color: #712a04;
   color: white;
   text-transform: uppercase;
   //font-family: "Open Sans Condensed";
@@ -16,10 +16,23 @@
   display: flex;
   justify-content: center;
 
-  &:hover {
+  border-radius: 11px;
+
+  transition: all 0.7s ease;
+
+  &:hover,
+  &:active {
     background-color: white;
-    color: black;
+    color: #712a04;
     border: 1px solid black;
+  }
+
+  &.label {
+    background-color: white;
+    color: #712a04;
+    border: 1px solid black;
+
+    cursor: auto;
   }
 
   &.google-sign-in {
@@ -27,8 +40,22 @@
     color: white;
 
     &:hover {
-      background-color: #357ae8;
-      border: none;
+      background-color: #fff;
+      color: #4285f4;
+      border: 1px solid black;
+      //border: none;
+    }
+  }
+
+  &.facebook-sign-in {
+    background-color: #0048bb;
+    color: white;
+
+    &:hover {
+      background-color: #fff;
+      color: #0048bb;
+      border: 1px solid black;
+      //border: none;
     }
   }
 

@@ -7,7 +7,7 @@ import { UserProvider } from "./contexts/user";
 import { CategoriesProvider } from "./contexts/categories";
 import { CartProvider } from "./contexts/cart";
 import { WindowPopUpBuyProvider } from "./contexts/window-popup-buy";
-import { WindowPopupProvider } from "./contexts/window-popup";
+//import { WindowPopupProvider } from "./contexts/window-popup";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -23,9 +23,9 @@ root.render(
         <CategoriesProvider>
           <CartProvider>
             <WindowPopUpBuyProvider>
-              <WindowPopupProvider>
+              <UserProvider>
                 <App />
-              </WindowPopupProvider>
+              </UserProvider>
             </WindowPopUpBuyProvider>
           </CartProvider>
         </CategoriesProvider>

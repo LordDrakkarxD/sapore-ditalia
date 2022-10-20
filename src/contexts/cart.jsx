@@ -6,7 +6,7 @@ export const addCartItem = (cartItems, productToAdd) => {
   );
 
   const isOptionsDifferent = cartItems.find(
-    (cartItem) => cartItem.options === productToAdd.options
+    (cartItem) => cartItem.option === productToAdd.option
   );
 
   if (existingCartItem) {
@@ -50,6 +50,8 @@ const clearCartItem = (cartItems, cartItemToClear) =>
   cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
 
 export const CartContext = createContext({
+  filterTerm: "",
+  setFilterTerm: () => {},
   isCartOpen: false,
   setIsCartOpen: () => {},
   cartItems: [],
@@ -61,6 +63,7 @@ export const CartContext = createContext({
 });
 
 export const CartProvider = ({ children }) => {
+  const [filterTerm, setFilterTerm] = useState("");
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [cartCount, setCartCount] = useState(0);
@@ -94,6 +97,8 @@ export const CartProvider = ({ children }) => {
   };
 
   const value = {
+    filterTerm,
+    setFilterTerm,
     isCartOpen,
     setIsCartOpen,
     addItemToCart,

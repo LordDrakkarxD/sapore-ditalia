@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { Link } from "react-router-dom";
 
 import "./sobre-nos.scss";
@@ -10,21 +12,13 @@ const SobreNos = () => {
           <video src="https://i.imgur.com/gWCE33c.mp4" autoPlay loop muted />
         </div>
         <div className="sobre-nos-text">
-          <h1>Paixão</h1>
+          <h1>HISTÓRIA DE PAIXÃO</h1>
           <p>
-            Cada criação é tratada como uma obra única desenhada com carinho.
-          </p>
-          <p>&nbsp;</p>
-          <p>
-            Elevamos a definição de "massa" a um nível nunca explorado, cada
-            item exala sofisticação.
-          </p>
-          <p>&nbsp;</p>
-          <p>
-            Fazemos a fusão das tradições centenárias da família italiana com
-            todas as inovações da culinária contemporânea unindo o antigo ao
-            novo para criar uma experiência de encantamento inesperado para o
-            paladar.
+            Especialista em massas e molhos frescos feitos artesanalmente,
+            nossos produtos são produzidos a partir da fusão das tradições
+            centenárias da família italiana com todas as inovações da culinária
+            contemporânea unindo o antigo ao novo para criar uma experiência de
+            encantamento jamais visto para o paladar.
           </p>
           <p>&nbsp;</p>
           <p>
@@ -33,10 +27,40 @@ const SobreNos = () => {
           </p>
           <p>&nbsp;</p>
           <p>
-            Nossos recheios se apresentam sutilmente, surpreendendo a cada
-            nuance, tomando forma lentamente em uma experiência sensorial
-            inesquecível.
+            Nossos produtos utilizam matérias primas premium originárias de
+            diversas partes do planeta, combinadas de forma imprevistas e
+            inovadoras e ainda preservando sua harmonia singular. Seus recheios
+            que se apresentam sutilmente, surpreendem a cada nuance, tomando
+            forma lentamente em uma experiência sensorial inesquecível.
           </p>
+          <p>&nbsp;</p>
+          <p>
+            Cada criaçao é tratada como uma obra única desenhada com carinho.
+            Levamos a definição de -Massa- a um nível jamais explorado, cada
+            item exala sofisticação.
+          </p>
+        </div>
+      </div>
+      <div className="rotisserie-preview-container">
+        <div className="rotisserie-preview-text">
+          <h1>CASA NOSTRA</h1>
+          <p>
+            Diferenciada principalmente pela sua qualidade, a marca possui
+            fabricação própria, onde produz todos os seus produtos artesanais,
+            que estão à disposição na loja diariamente.
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            Com uma extensa variedade de pratos prontos ou semiprontos para o
+            dia a dia ou para comemorações e festas, a Rosticceria oferece
+            ótimas opções para quem, além da qualidade, não abre mão de
+            praticidade.
+          </p>
+          <p>&nbsp;</p>
+          <p>Desfrute da Rosticceria por encomendas ou retirada na loja.</p>
+        </div>
+        <div className="rotisserie-preview-video">
+          <video src="https://i.imgur.com/sXtWiPy.mp4" autoPlay loop muted />
         </div>
       </div>
       <div className="enoteca-preview-container">
@@ -62,3 +86,13 @@ const SobreNos = () => {
 };
 
 export default SobreNos;
+
+{
+  /*<Slider {...settings}>
+        {images.map((img, idx) => (
+          <div className={idx === imageIndex ? "slides activeSlide" : "slides"}>
+            <img src={img} alt={img} />
+          </div>
+        ))}
+        </Slider>*/
+}

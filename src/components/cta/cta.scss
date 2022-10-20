@@ -1,74 +1,88 @@
 .section-cta {
-  padding: 9.6rem 0;
+  flex-direction: column;
+
+  //background-image: url("../../assets/background-preto.jpg");
+
+  background-repeat: repeat;
+
+  background-position: center;
+
+  padding-top: 2.4rem;
+
+  //background-size: cover;
 
   .cta-container {
-    max-width: 120rem;
-    padding: 0 3.2rem;
-    margin: 0 auto;
+    background-color: #712a04;
+    border-top: 1px #ffd700 solid;
+    border-bottom: 1px #ffd700 solid;
+    display: flex;
+    height: 10vh;
+    //flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    .cta {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      //background-color: #ffd700;
+    gap: 2.4rem;
 
-      //box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-
-      border: 2px solid #ffd700;
-
-      border-radius: 11px;
-
-      //background-image: linear-gradient(to right bottom, #b39700, #ffd700);
-      overflow: hidden;
-
-      height: 50rem;
+    .cta-span {
+      font-size: 5rem;
+      color: #fff;
     }
 
-    .cta-text-box {
+    .arrow-icon {
+      font-size: 1.6rem;
       color: #fff;
-      padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+      transition: all 0.7s;
 
-      .cta-heading {
-        //color: #333;
-        letter-spacing: -0.5px;
-        font-size: 4.4rem;
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 3.2rem;
-      }
+      width: 5.5rem;
+      height: 100%;
+    }
 
-      .cta-text {
-        font-size: 1.8rem;
-        line-height: 1.8;
-      }
+    .social-links {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.2rem;
 
-      .cta-button {
-        font-size: 1.8rem;
-        line-height: 1.8;
-
-        border: none;
-        background: none;
+      .social-link {
+        font-size: 1.6rem;
         color: #fff;
-
-        cursor: pointer;
-
         transition: all 0.7s;
 
-        &:hover {
-          color: #ffd700;
+        .social-icon {
+          width: 4rem;
+          height: 100%;
+        }
+
+        &.ifood .social-icon {
+          width: 5rem;
+          height: 100%;
+        }
+
+        &.facebook:hover,
+        &.facebook:active {
+          transform: scale(1.1);
+          color: #4267b2;
+        }
+
+        &.instagram:hover,
+        &.instagram:active {
+          transform: scale(1.1);
+          color: #c13584;
+        }
+
+        &.whatsapp:hover,
+        &.whatsapp:active {
+          transform: scale(1.1);
+          color: #25d366;
+        }
+
+        &.ifood:hover,
+        &.ifood:active {
+          transform: scale(1.1);
+          color: red;
         }
       }
-    }
-
-    .cta-img-box {
-      // background-image: linear-gradient(
-      //     to right bottom,
-      //     rgba(179, 151, 0, 0.5),
-      //     rgba(284, 145, 0, 0.5)
-      //   ),
-      //   url(https://i.imgur.com/NEvaOpT.jpg);
-      background-image: url(https://i.imgur.com/NEvaOpT.jpg);
-      background-size: cover;
-      background-position: center;
     }
   }
 }

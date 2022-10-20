@@ -8,7 +8,7 @@
 
   font-size: 1.8em;
 
-  color: #ea1d2c;
+  color: #fff;
 
   transition: all 0.3s ease-in-out;
 
@@ -16,15 +16,14 @@
 
   &:hover,
   &:active {
-    background-color: #efefef;
+    background-color: #2d1102;
+    //color: #fff;
   }
 
   &.ativo {
-    background-color: #ea1d2c;
-    color: #fff;
-  }
-
-  .cart-icon {
+    //background-color: #ffd700;
+    //background-color: #712a04;
+    color: #ffd700;
   }
 
   .cart-info {

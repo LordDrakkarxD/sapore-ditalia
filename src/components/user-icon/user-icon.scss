@@ -2,12 +2,37 @@
   display: flex;
   align-items: center;
 
-  color: #ea1d2c;
-
-  font-size: 1.8em;
-
   cursor: pointer;
 
+  &.true {
+    color: #fff;
+
+    position: relative;
+
+    .crown-icon {
+      display: inline-block;
+
+      position: absolute;
+
+      color: #ffd700;
+
+      top: -10px;
+      left: 1.2px;
+
+      //z-index: 2;
+    }
+  }
+
+  &.false {
+    //fill: #fff;
+    color: #fff;
+
+    .crown-icon {
+      display: none;
+    }
+  }
+
   .user-icon {
+    font-size: 1.8rem;
   }
 }

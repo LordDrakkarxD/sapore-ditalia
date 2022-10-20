@@ -17,6 +17,8 @@ export const addFormItem = (formData, itemToAdd) => {
 };
 
 export const WindowPopUpBuyContext = createContext({
+  counterB: true,
+  setBCounter: () => {},
   productSelected: {},
   setProductSelected: () => {},
   itemsTotal: 1,
@@ -29,6 +31,7 @@ export const WindowPopUpBuyContext = createContext({
 });
 
 export const WindowPopUpBuyProvider = ({ children }) => {
+  const [counterB, setBCounter] = useState(true);
   const [productSelected, setProductSelected] = useState({});
   const [itemsTotal, setItemsTotal] = useState(1);
   const [formData, setFormData] = useState([]);
@@ -44,6 +47,8 @@ export const WindowPopUpBuyProvider = ({ children }) => {
   };
 
   const value = {
+    counterB,
+    setBCounter,
     productSelected,
     setProductSelected,
     itemsTotal,

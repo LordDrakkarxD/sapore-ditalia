@@ -1,0 +1,67 @@
+.section-menu {
+  display: flex;
+  flex-direction: column;
+
+  padding: 8.4rem 0;
+
+  padding-top: 0;
+
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8.4rem;
+
+    .menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100vw;
+      max-width: 100%;
+      height: 30vh;
+
+      background: url("../../assets/pasta.jpg") center;
+
+      background-attachment: fixed;
+      background-size: cover;
+
+      // background: no-repeat url("../../assets/Banner_rosticeria_1.jpg") center
+      //   center;
+
+      // background-size: cover;
+
+      span {
+        font-size: 5rem;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+
+    .menu-options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      gap: 15px;
+
+      width: 90vw;
+      height: 100%;
+
+      margin: 0 auto;
+
+      //border: 3px solid #ffd700;
+
+      border-radius: 11px;
+
+      overflow: hidden;
+
+      .menu-option {
+        width: 100%;
+      }
+    }
+  }
+}

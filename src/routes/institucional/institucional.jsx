@@ -37,19 +37,26 @@ const select = [
       <div>
         <p></p>
         <p className="quem-somos-a">
-          Para nós, a segurança do negócio é fundamental para garantir não só
-          uma operação estável e proteção do seu dinheiro, mas a segurança dos
-          dados de nossos clientes. Por isso nossa loja conta com:
+          Somos a SAPORE D ITALIA MASSAS ARTESANAIS LTDA, CNPJ
+          44.046.276/0001-86, uma cozinha industrial especializada em massas
+          artesanais com receitas trazidas da Itália. Fazemos diversos tipos de
+          massas italianas irresistíveis tanto para comer de forma tradicional
+          como também temos especialidade em massas gourmets. Estamos
+          localizados na Rua das Perdizes n°57 - Loja 4 - Barra Funda, São Paulo
+          - SP, 01156-030, de onde enviamos nossos produtos para atender aos
+          clientes localizados em todas as regiões da cidade.
         </p>
         <p>
           <br />
         </p>
         <p className="quem-somos-a">
-          <b>Estabilidade Total</b>
+          Nosso objetivo é oferecer para você a massa italiana mais tradicional,
+          feita com os melhores ingredientes e pronta para ser degustada pelo
+          seu paladar ao alcance de sua casa em São Paulo, agora entregue no seu
+          endereço, pelo nosso serviço de delivery, em parceria com o iFood.
         </p>
-        <p className="quem-somos-a">
-          Infraestrutura capaz de processar milhares de transações por segundo,
-          com 99% de uptime e status page em real time.
+        <p>
+          <br />
         </p>
       </div>
     ),
@@ -81,14 +88,63 @@ const select = [
     title: "Política de Privacidade",
     text: (
       <div>
-        <p></p>
+        <p>Privacidade</p>
         <p className="quem-somos-a">
-          Se você está aqui é porque você quer saber mais sobre as obrigações e
-          direitos que lhe correspondem como um usuário deste site, Clube Massa:
-          http://www.clubemassa.com. Nosso dever é informar e o seu é estar
-          devidamente informado.
+          Nosso compromisso é respeitar sua privacidade e garantir o sigilo de
+          todas as informações que você nos fornece. Todos os dados cadastrados
+          em nosso site são utilizados apenas para melhorar sua experiência de
+          compra e mantê-lo atualizado sobre nossas promoções e vantagens
+          oferecidas pelo Sapore D Italia Massas Artesanais ltda.
         </p>
-        <p></p>
+        {/*<p className="quem-somos-a">
+          <b>Estabilidade Total</b>
+        </p>
+        <p className="quem-somos-a">
+          Infraestrutura capaz de processar milhares de transações por segundo,
+          com 99% de uptime e status page em real time.
+    </p>*/}
+        {/*<p>Uso das informações</p>
+        <p className="quem-somos-a">
+          Para seu cadastro, solicitamos informações como: nome, endereço,
+          e-mail e telefones para contato, para facilitar suas compras no site.
+          O seu e-mail é utilizado para divulgar informações de suas compras e,
+          quando solicitado por você, para comunicar promoções de produtos
+          oferecidos pela Sapore D Italia Massas Artesanais ltda.
+        </p>
+        <p>Cookies</p>
+        <p className="quem-somos-a">
+          Na Sapore, o uso de cookies é feito apenas para reconhecer um
+          visitante constante e melhorar a experiência de compra. Os cookies são
+          pequenos arquivos de dados transferidos de um site da web para o disco
+          do seu computador e não armazenam dados pessoais. Se preferir, você
+          pode apagar os cookies existentes em seu computador através do
+          browser.
+        </p>
+        <p>Envio de e-mails</p>
+        <p className="quem-somos-a">
+          A Sapore D Italia massas artesanais, nunca enviará e-mails solicitando
+          confirmação de dados/ cadastro ou com anexos executáveis (extensão
+          exe, com, scr, bat) e links para download. Nossos e-mails têm sempre
+          como remetente: contato@saporediitalia.com.br Os e-mails de
+          acompanhamento de seu pedido de compra serão enviados
+          como: contato@saporediitalia.com.br ou diretamente pelo contato via
+          whatsapp: (11)98394-3845. Os links de nossos e-mails levam diretamente
+          para a loja online da Sapore D Italia Massas Artesanais Ltda. Nunca
+          forneça a senha de seu cadastro a terceiros e, no caso de uso não
+          autorizado, acesse imediatamente a área “Meus pedidos” no site e
+          altere sua senha. Caso não queira mais receber nosso newsletter com
+          novidades do mundo gastronômico e nossos últimos lançamentos, basta se
+          descadastrar nos e-mails recebidos.
+        </p>
+        <p>Segurança</p>
+        <p className="quem-somos-a">
+          Nosso site utiliza uma tecnologia avançada de segurança. Todo o
+          tráfego de dados que acontece nas páginas “Carrinho”, “Checkout” e
+          “Meus Pedidos” é feito com as informações criptografadas,
+          utilizando-se do certificado SSL, que é um método padrão usado na
+          Internet para proteger as transmissões de dados entre os usuários da
+          Web e os sites, fornecendo uma compra segura.
+          </p>*/}
       </div>
     ),
   },
@@ -122,7 +178,7 @@ const Institucional = ({ title }) => {
               >
                 Política de Privacidade
               </Link>
-              <Link className="quem-somos-link" to="/institucional/delivery">
+              <Link className="quem-somos-link" to="/delivery">
                 Delivery
               </Link>
               <Link className="quem-somos-link" to="/contato">

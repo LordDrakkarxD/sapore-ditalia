@@ -1,0 +1,324 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.section-sobre-nos {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8.4rem;
+
+  padding: 8.4rem 0;
+
+  //min-width: 980px;
+
+  //width: calc(100% - 80px - 80px);
+
+  .sobre-nos-container {
+    display: flex;
+    align-items: center;
+
+    width: 90vw;
+    height: 680px;
+
+    margin: 0 auto;
+
+    border: 3px solid #ffd700;
+
+    border-radius: 11px;
+
+    overflow: hidden;
+
+    .sobre-nos-video {
+      width: 100%;
+      height: 100%;
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+
+    .sobre-nos-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      //align-items: center;
+
+      width: calc(100% - 12rem);
+      height: 100%;
+      background-color: #712a04;
+
+      padding: 12rem 6rem;
+
+      h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        color: #fff;
+
+        margin-bottom: 3.6rem;
+      }
+
+      p {
+        font-size: 2rem;
+        line-height: 1.2;
+        color: #fff;
+      }
+    }
+  }
+
+  .slides {
+    img {
+      width: 30rem;
+      height: 15rem;
+      margin: 0 auto;
+    }
+  }
+
+  .rotisserie-preview-container {
+    display: flex;
+    align-items: center;
+
+    width: 90vw;
+    height: 680px;
+
+    margin: 0 auto;
+
+    border: 3px solid #ffd700;
+
+    border-radius: 11px;
+
+    overflow: hidden;
+
+    .rotisserie-preview-video {
+      width: 100%;
+      height: 100%;
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+
+    .rotisserie-preview-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      //align-items: center;
+
+      width: calc(100% - 12rem);
+      height: 100%;
+      background-color: #712a04;
+
+      padding: 12rem 6rem;
+
+      h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        color: #fff;
+
+        margin-bottom: 3.6rem;
+      }
+
+      p {
+        font-size: 2rem;
+        line-height: 1.2;
+        color: #fff;
+      }
+    }
+  }
+
+  // .rotisserie-preview-container {
+  //   display: flex;
+  //   align-items: center;
+
+  //   width: 100vw;
+  //   max-width: 100%;
+  //   height: 65vh;
+
+  //   margin: 0 auto;
+
+  //   background-image: url("https://i.imgur.com/ZGbjSfp.jpg");
+
+  //   background-attachment: fixed;
+  //   background-size: cover;
+  //   background-position: center;
+
+  //   //border: 5px solid #ffd700;
+
+  //   //border-radius: 11px;
+
+  //   //overflow: hidden;
+
+  //   position: relative;
+
+  //   .rotisserie-text {
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: flex-start;
+  //     justify-content: center;
+
+  //     position: absolute;
+  //     left: 15%;
+  //     top: 50%;
+  //     transform: translate(-15%, -50%);
+
+  //     color: #fff;
+
+  //     .rotisserie-heading {
+  //       font-size: 7rem;
+  //       font-weight: 700;
+  //       line-height: 1.05;
+  //       letter-spacing: -0.5px;
+
+  //       color: #fff;
+
+  //       //margin-bottom: 3.2rem;
+  //     }
+
+  //     .rotisserie-description {
+  //       font-size: 2.4rem;
+  //       //font-weight: 700;
+  //       line-height: 1.2;
+  //       letter-spacing: -0.5px;
+
+  //       margin-bottom: 3.2rem;
+  //     }
+
+  //     .rotisserie-button {
+  //       display: flex;
+  //       align-items: center;
+
+  //       background-color: #fff;
+  //       border: none;
+  //       color: #712a04;
+  //       padding: 15px 32px;
+  //       text-align: center;
+  //       text-decoration: none;
+  //       text-align: center;
+
+  //       cursor: pointer;
+
+  //       transition: all 0.7s ease;
+
+  //       border: none;
+
+  //       border-radius: 11px;
+
+  //       .rotisserie-link {
+  //         span {
+  //           font-size: 1.8rem;
+  //           font-weight: 500;
+  //           font-family: "Rubik", sans-serif;
+  //         }
+  //       }
+
+  //       &:active,
+  //       &:hover {
+  //         background-color: #712a04;
+  //         span {
+  //           color: #fff;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  .enoteca-preview-container {
+    display: flex;
+    align-items: center;
+
+    width: 100vw;
+    max-width: 100%;
+    height: 65vh;
+
+    margin: 0 auto;
+
+    background-image: url("https://i.imgur.com/BJK6sZV.jpg");
+
+    background-attachment: fixed;
+    background-size: cover;
+
+    //border: 5px solid #ffd700;
+
+    //border-radius: 11px;
+
+    //overflow: hidden;
+
+    position: relative;
+
+    .enoteca-text {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: center;
+
+      position: absolute;
+      right: 2%;
+      top: 50%;
+      transform: translate(-2%, -50%);
+
+      color: #fff;
+
+      .enoteca-heading {
+        font-size: 7rem;
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: -0.5px;
+
+        color: #fff;
+
+        //margin-bottom: 3.2rem;
+      }
+
+      .enoteca-description {
+        font-size: 2.4rem;
+        //font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+
+        margin-bottom: 3.2rem;
+      }
+
+      .enoteca-button {
+        display: flex;
+        align-items: center;
+
+        background-color: #fff;
+        border: none;
+        color: #712a04;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        text-align: center;
+
+        cursor: pointer;
+
+        transition: all 0.7s ease;
+
+        border: none;
+
+        border-radius: 11px;
+
+        .enoteca-link {
+          span {
+            font-size: 1.8rem;
+            font-weight: 500;
+            font-family: "Rubik", sans-serif;
+          }
+        }
+
+        &:active,
+        &:hover {
+          background-color: #712a04;
+          span {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Pomodoro from "../../assets/pomodoro.jpg";
 import Bolonhesa from "../../assets/bolonhesa.jpg";
 import MolhoBranco from "../../assets/molhobranco.jpg";
@@ -5,6 +7,8 @@ import FrutosDoMar from "../../assets/molho-frutos-do-mar.jpg";
 import Pesto from "../../assets/pesto.webp";
 
 import EnotecaVinhos from "../../assets/Enoteca-vinhos.jpg";
+
+import Vinhos from "../../assets/vinhos/vinhos.pdf";
 
 import "./enoteca.scss";
 
@@ -18,24 +22,32 @@ const Enoteca = () => {
         <div className="enoteca-vinhos">
           <div className="enoteca-vinhos-text">
             <h1>Nossos Vinhos</h1>
-            <p>Eis o par perfeito. Uma bela massa e um bom vinho.</p>
-            <p>&nbsp;</p>
             <p>
-              Os próprios italianos afirmam que não existe uma regra para esse
-              tipo de harmonização.
+              A nossa enoteca está repleta de vinhos de todos os preços e de
+              todas as partes do mundo. 
             </p>
             <p>&nbsp;</p>
             <p>
-              Porém, a experiência fica muito mais prazerosa se pratos com
-              molhos à base de carne ou tomate forem acompanhados de tintos e os
-              elaborados com queijos ou frutos do mar forem tomados com brancos.
+              O enólogo da casa está sempre apto a ajudar na sua escolha, entre
+              em contato para fazer o seu pedido.
             </p>
             <p>&nbsp;</p>
             <p>
-              O mais importante é que esses vinhos sejam leves, tenham boa
-              acidez e não muito álcool.
+              Todo mês além da seleção da nossa enoteca separamos alguns rótulos
+              para facilitar a sua escolha.
             </p>
             <p>&nbsp;</p>
+            <p>
+              Confira nossos{" "}
+              <a
+                href={Vinhos}
+                className="cardapio-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>vinhos.</span>
+              </a>
+            </p>
           </div>
           <div className="enoteca-vinhos-image">
             <img src={EnotecaVinhos} alt="vinho" />
@@ -54,7 +66,7 @@ const Enoteca = () => {
           <div className="harmonia-items">
             <div className="harmonia-item">
               <div className="harmonia-item-image">
-                <img src={Pomodoro} alt="example" />
+                <img src="https://i.imgur.com/KiaeyD0.jpg" alt="example" />
               </div>
               <div className="harmonia-item-text">
                 <h1>Pomodoro</h1>
@@ -94,12 +106,12 @@ const Enoteca = () => {
                 </p>
               </div>
               <div className="harmonia-item-image">
-                <img src={Bolonhesa} alt="example" />
+                <img src="https://i.imgur.com/xObUMGr.jpg" alt="example" />
               </div>
             </div>
             <div className="harmonia-item">
               <div className="harmonia-item-image">
-                <img src={MolhoBranco} alt="example" />
+                <img src="https://i.imgur.com/8q0pctA.jpg" alt="example" />
               </div>
               <div className="harmonia-item-text">
                 <h1>Molho Branco</h1>
@@ -133,7 +145,7 @@ const Enoteca = () => {
                 <p>FRUTOS DO MAR – Brancos e rosés em geral.</p>
               </div>
               <div className="harmonia-item-image">
-                <img src={FrutosDoMar} alt="example" />
+                <img src="https://i.imgur.com/UA269Ea.jpg" alt="example" />
               </div>
             </div>
             <div className="harmonia-item">

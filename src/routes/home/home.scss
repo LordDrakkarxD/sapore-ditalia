@@ -1,9 +1,13 @@
-.home-container {
-  // .header-content {
-  //   width: 100%;
-
-  //   background: no-repeat url(../../assets/banner-1.png) center center;
-
-  //   background-size: cover;
-  // }
+/*.home-container {
+  .mobile-div {
+    display: none;
+  }
 }
+
+@media (max-width: 34em) {
+  .home-container {
+    .mobile-div {
+      display: block;
+    }
+  }
+}*/

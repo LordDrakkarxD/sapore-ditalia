@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import { UserContext } from "../../contexts/user";
 
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 
 import {
   signInWithGooglePopup,
+  signInWithFacebookPopup,
   createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
+  retrieveDocumentInformation,
 } from "../../utils/firebase/firebase.utils";
 
 import "./sign-in-form.scss";
@@ -19,6 +23,7 @@ const defaultFormFields = {
 };
 
 const SignInForm = () => {
+  const { setCurrentUser, currentUserData } = useContext(UserContext);
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
@@ -30,6 +35,10 @@ const SignInForm = () => {
     await signInWithGooglePopup();
   };
 
+  const signInWithFacebook = async () => {
+    await signInWithFacebookPopup();
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -38,6 +47,8 @@ const SignInForm = () => {
         email,
         password
       );
+
+      const userData = await retrieveDocumentInformation(user);
 
       resetFormFields();
     } catch (err) {
@@ -62,9 +73,14 @@ const SignInForm = () => {
 
   return (
     <div className="sign-in-container">
-      <h2>Ja possui uma conta?</h2>
-      <span>Entre com seu email e senha</span>
-      <form onSubmit={handleSubmit}>
+      <h2>Faça seu login</h2>
+      <Button type="button" buttonType="google" onClick={signInWithGoogle}>
+        Continuar com Google
+      </Button>
+      <Button type="button" buttonType="facebook" onClick={signInWithFacebook}>
+        Continuar com Facebook
+      </Button>
+      <form className="sign-in-form" onSubmit={handleSubmit}>
         <FormInput
           label="Email"
           type="email"
@@ -72,6 +88,7 @@ const SignInForm = () => {
           onChange={handleChange}
           name="email"
           value={email}
+          placeholder="Digite seu email"
         />
         <FormInput
           label="Senha"
@@ -80,17 +97,20 @@ const SignInForm = () => {
           onChange={handleChange}
           name="password"
           value={password}
+          placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
         />
         <div className="buttons-container">
           <Button type="submit">Entrar</Button>
-          <Button type="button" buttonType="google" onClick={signInWithGoogle}>
-            Entrar com Google
-          </Button>
         </div>
+        <Link to="forgot-password">
+          <span className="forgot-account-button">Esqueceu sua senha?</span>
+        </Link>
       </form>
       <div className="sign-up-button">
-        <span>Nao tem uma conta?</span>
-        <Link to="/signup">Cadastre-se aqui</Link>
+        <span className="sign-up-no-account">Nao tem uma conta?</span>
+        <Link className="sign-up-link" to="/signup">
+          Cadastre-se aqui.
+        </Link>
       </div>
     </div>
   );

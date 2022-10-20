@@ -7,10 +7,11 @@ import {
 
 import "./user-icon.scss";
 
-const UserIcon = () => {
+const UserIcon = ({ logged }) => {
   return (
-    <div className="user-icon-container">
-      <FontAwesomeIcon icon={regular("user")} className="user-icon" />
+    <div className={`user-icon-container ${logged}`}>
+      <FontAwesomeIcon icon={solid("crown")} className="crown-icon" />
+      <FontAwesomeIcon icon={solid("user")} className="user-icon" />
     </div>
   );
 };
