@@ -3,10 +3,6 @@
   width: 100vw;
   height: calc(100vw / 2.5);
 
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-
   overflow: hidden;
 }
 
@@ -23,6 +19,7 @@
 
 .slide.current {
   opacity: 1;
+  -webkit-animation: fadeIn 2s ease;
   animation: fadeIn 2s ease;
 }
 
@@ -30,83 +27,3 @@
   width: 100%;
   height: 100%;
 }
-
-// @media (max-width: 75em) {
-//   .slider {
-//     height: 550px;
-//   }
-// }
-
-// @media (max-width: 59em) {
-//   .slider {
-//     height: 500px;
-//   }
-// }
-
-// @media (max-width: 44em) {
-//   .slider {
-//     height: 400px;
-//   }
-// }
-
-// @media (max-width: 34em) {
-//   .slider {
-//     height: 300px;
-//   }
-// }
-
-// .slider {
-//   width: 100%;
-//   height: 90vh;
-//   position: relative;
-//   overflow: hidden;
-// }
-
-// .content {
-//   position: absolute;
-//   top: 23rem;
-//   left: 5rem;
-//   opacity: 0;
-//   width: 50%;
-//   color: #fff;
-//   padding: 3rem;
-//   background: rgba(0, 0, 0, 0.3);
-//   animation: slide-up 1s ease 0.5s;
-//   // animation-delay: 1s;
-//   animation-fill-mode: forwards;
-//   visibility: hidden;
-// }
-
-// @keyframes slide-up {
-//   0% {
-//     visibility: visible;
-//     top: 23rem;
-//   }
-//   100% {
-//     visibility: visible;
-//     top: 17rem;
-//   }
-// }
-
-// @media screen and (max-width: 600px) {
-//   .content {
-//     width: 80%;
-//   }
-// }
-
-// .content > * {
-//   color: #fff;
-//   margin-bottom: 1rem;
-// }
-
-// .current .content {
-//   opacity: 1;
-//   transform: translateX(0);
-//   transition: all 0.5s ease;
-// }
-
-// hr {
-//   height: 2px;
-//   background: white;
-//   width: 50%;
-// }

@@ -13,10 +13,24 @@
   font-weight: bolder;
   border: none;
   cursor: pointer;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+
+  -webkit-box-pack: center;
+
+  -ms-flex-pack: center;
+
   justify-content: center;
 
   border-radius: 11px;
+
+  -webkit-transition: all 0.7s ease;
+
+  -o-transition: all 0.7s ease;
 
   transition: all 0.7s ease;
 

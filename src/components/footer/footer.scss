@@ -13,8 +13,12 @@
   }
 
   .footer-container {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1.5fr 2.4rem 1fr 2.4rem 1fr 2.4rem 1fr;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    -webkit-column-gap: 3rem;
+    -moz-column-gap: 3rem;
     column-gap: 3rem;
     //row-gap: 9rem;
 
@@ -23,8 +27,15 @@
     margin: 0 auto;
 
     .logo-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
 
       .footer-logo {
@@ -37,14 +48,20 @@
       }
 
       .social-links {
+        display: -ms-grid;
         display: grid;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -ms-grid-columns: 1fr 2.4rem 1fr 2.4rem 1fr 2.4rem 1fr;
         grid-template-columns: repeat(4, 1fr);
         gap: 2.4rem;
 
         .social-link {
           font-size: 1.6rem;
           color: #fff;
+          -webkit-transition: all 0.7s;
+          -o-transition: all 0.7s;
           transition: all 0.7s;
 
           .social-icon {
@@ -59,36 +76,48 @@
 
           &.youtube:hover,
           &.youtube:active {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
             transform: scale(1.1);
             color: #ff0000;
           }
 
           &.facebook:hover,
           &.facebook:active {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
             transform: scale(1.1);
             color: #4267b2;
           }
 
           &.instagram:hover,
           &.instagram:active {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
             transform: scale(1.1);
             color: #c13584;
           }
 
           &.whatsapp:hover,
           &.whatsapp:active {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
             transform: scale(1.1);
             color: #25d366;
           }
 
           &.email:hover,
           &.email:active {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
             transform: scale(1.1);
             color: red;
           }
 
           &.ifood:hover,
           &.ifood:active {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
             transform: scale(1.1);
             color: red;
           }
@@ -118,6 +147,8 @@
           .footer-link {
             font-size: 1.6rem;
             color: #fff;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
 
             &:hover,
@@ -138,7 +169,9 @@
       }
 
       .footer-cards-nav {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 2.4rem 1fr 2.4rem 1fr 2.4rem 1fr;
         grid-template-columns: repeat(4, 1fr);
         gap: 2.4rem;
 
@@ -150,13 +183,20 @@
       }
 
       .footer-nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         gap: 2.4rem;
 
         .footer-link {
           font-size: 1.6rem;
           color: #fff;
+          -webkit-transition: all 0.7s;
+          -o-transition: all 0.7s;
           transition: all 0.7s;
 
           &:hover,
@@ -170,8 +210,14 @@
 }
 
 .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
   font-size: 1.4rem;

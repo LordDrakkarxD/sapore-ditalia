@@ -1,8 +1,17 @@
 .quem-somos-container {
   .quem-somos-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     width: 100%;
@@ -31,10 +40,16 @@
   }
 
   .quem-somos-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     //flex-wrap: wrap;
 
     gap: 3rem;
+
+    -webkit-box-pack: justify;
+
+    -ms-flex-pack: justify;
 
     justify-content: space-between;
 
@@ -43,10 +58,17 @@
     margin: 0 auto;
 
     .quem-somos-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
 
       //align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
 
       width: 100%;
@@ -62,11 +84,20 @@
 
       //border-radius: 11px;
 
+      -webkit-animation: fadeIn 2s;
+
       animation: fadeIn 2s;
 
       .quem-somos-menu-title {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
 
         width: 100%;
@@ -88,9 +119,18 @@
       }
 
       .quem-somos-links {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         gap: 2rem;
 
@@ -100,6 +140,8 @@
           color: #666;
           display: block;
           //margin-bottom: 10px;
+          -webkit-transition: all 0.7s;
+          -o-transition: all 0.7s;
           transition: all 0.7s;
 
           &:last-child {
@@ -109,6 +151,8 @@
           &:active,
           &:hover {
             color: #ffd700;
+            -webkit-transform: translateX(0.7rem);
+            -ms-transform: translateX(0.7rem);
             transform: translateX(0.7rem);
           }
         }
@@ -123,6 +167,8 @@
     margin-bottom: 120px;
 
     color: #666;
+
+    -webkit-animation: moveLeft 2s;
 
     animation: moveLeft 2s;
 
@@ -150,6 +196,15 @@
   }
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -159,11 +214,24 @@
   }
 }
 
-@keyframes moveLeft {
+@-webkit-keyframes moveLeft {
   from {
+    -webkit-transform: translateX(12rem);
     transform: translateX(12rem);
   }
   to {
+    -webkit-transform: translateY(0rem);
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    -webkit-transform: translateX(12rem);
+    transform: translateX(12rem);
+  }
+  to {
+    -webkit-transform: translateY(0rem);
     transform: translateY(0rem);
   }
 }

@@ -1,6 +1,14 @@
 .nav-bar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+
+  -webkit-column-gap: 4rem;
+
+  -moz-column-gap: 4rem;
 
   column-gap: 4rem;
 
@@ -12,6 +20,10 @@
       font-weight: 500;
       color: #fff;
 
+      -webkit-transition: all 0.4s;
+
+      -o-transition: all 0.4s;
+
       transition: all 0.4s;
 
       text-decoration: none;
@@ -21,6 +33,8 @@
       &:hover,
       &:active {
         color: #ffd700;
+        -webkit-transform: translateY(0.5rem);
+        -ms-transform: translateY(0.5rem);
         transform: translateY(0.5rem);
       }
     }
@@ -31,6 +45,10 @@
     font-weight: 500;
     color: #fff;
 
+    -webkit-transition: all 0.5s ease;
+
+    -o-transition: all 0.5s ease;
+
     transition: all 0.5s ease;
 
     text-decoration: none;
@@ -40,13 +58,21 @@
     &:hover,
     &:active {
       color: #ffd700;
+      -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
       transform: translateY(5px);
     }
   }
 
   .nav-bar-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     gap: 10px;

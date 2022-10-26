@@ -1,4 +1,7 @@
 .section-cta {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 
   //background-image: url("../../assets/background-preto.jpg");
@@ -15,10 +18,16 @@
     background-color: #712a04;
     border-top: 1px #ffd700 solid;
     border-bottom: 1px #ffd700 solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 10vh;
     //flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     gap: 2.4rem;
@@ -31,6 +40,8 @@
     .arrow-icon {
       font-size: 1.6rem;
       color: #fff;
+      -webkit-transition: all 0.7s;
+      -o-transition: all 0.7s;
       transition: all 0.7s;
 
       width: 5.5rem;
@@ -38,15 +49,23 @@
     }
 
     .social-links {
+      display: -ms-grid;
       display: grid;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -ms-grid-columns: 1fr 1.2rem 1fr 1.2rem 1fr 1.2rem 1fr 1.2rem 1fr;
       grid-template-columns: repeat(5, 1fr);
       gap: 1.2rem;
 
       .social-link {
         font-size: 1.6rem;
         color: #fff;
+        -webkit-transition: all 0.7s;
+        -o-transition: all 0.7s;
         transition: all 0.7s;
 
         .social-icon {
@@ -61,24 +80,32 @@
 
         &.facebook:hover,
         &.facebook:active {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
           transform: scale(1.1);
           color: #4267b2;
         }
 
         &.instagram:hover,
         &.instagram:active {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
           transform: scale(1.1);
           color: #c13584;
         }
 
         &.whatsapp:hover,
         &.whatsapp:active {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
           transform: scale(1.1);
           color: #25d366;
         }
 
         &.ifood:hover,
         &.ifood:active {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
           transform: scale(1.1);
           color: red;
         }
