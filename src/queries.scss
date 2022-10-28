@@ -7,6 +7,8 @@ Instead, 1rem = 1em = 16px
 
 @media (max-width: 84em) {
   .nav-bar-container {
+    -webkit-column-gap: 3.6rem;
+    -moz-column-gap: 3.6rem;
     column-gap: 3.6rem;
 
     &.sticky {
@@ -490,6 +492,8 @@ Instead, 1rem = 1em = 16px
     //padding: 2rem 0;
 
     .footer-container {
+      -webkit-column-gap: 3rem;
+      -moz-column-gap: 3rem;
       column-gap: 3rem;
 
       max-width: 120rem;
@@ -549,7 +553,9 @@ Instead, 1rem = 1em = 16px
         }
 
         .footer-cards-nav {
+          display: -ms-grid;
           display: grid;
+          -ms-grid-columns: 1fr 2.4rem 1fr 2.4rem 1fr 2.4rem 1fr;
           grid-template-columns: repeat(4, 1fr);
           gap: 2.4rem;
 
@@ -685,6 +691,8 @@ Instead, 1rem = 1em = 16px
 
 @media (max-width: 34em) {
   .nav-bar-container {
+    -webkit-column-gap: 2.4rem;
+    -moz-column-gap: 2.4rem;
     column-gap: 2.4rem;
 
     &.sticky {
@@ -861,6 +869,8 @@ Instead, 1rem = 1em = 16px
 
   .footer {
     .footer-container {
+      -webkit-column-gap: 2.6rem;
+      -moz-column-gap: 2.6rem;
       column-gap: 2.6rem;
 
       max-width: 120rem;
@@ -920,8 +930,12 @@ Instead, 1rem = 1em = 16px
         }
 
         .footer-cards-nav {
+          display: -ms-grid;
           display: grid;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
+          -ms-grid-columns: 1fr 2rem 1fr;
           grid-template-columns: repeat(2, 1fr);
           gap: 2rem;
 
