@@ -113,3 +113,71 @@
     }
   }
 }
+
+@media screen and (max-width: 84em) {
+  .section-cta {
+    padding-top: 2.4rem;
+
+    .cta-container {
+      height: 9.6vh;
+
+      gap: 2.2rem;
+
+      .cta-span {
+        font-size: 4.4rem;
+      }
+
+      .social-links {
+        gap: 1.2rem;
+
+        .social-link {
+          font-size: 1.6rem;
+
+          .social-icon {
+            width: 3.6rem;
+            height: 100%;
+          }
+
+          &.ifood .social-icon {
+            width: 4.6rem;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 34em) {
+  .section-cta {
+    padding-top: 2.4rem;
+
+    .cta-container {
+      height: 6.4vh;
+
+      gap: 2.2rem;
+
+      .cta-span {
+        font-size: 2.4rem;
+      }
+
+      .social-links {
+        gap: 1.2rem;
+
+        .social-link {
+          font-size: 1.6rem;
+
+          .social-icon {
+            width: 2.4rem;
+            height: 100%;
+          }
+
+          &.ifood .social-icon {
+            width: 3.2rem;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -292,3 +292,168 @@
     }
   }
 }
+
+@media screen and (max-width: 84em) {
+  .section-enoteca {
+    .enoteca-container {
+      .enoteca-header {
+        height: 25vh;
+
+        span {
+          font-size: 4.6rem;
+        }
+      }
+
+      .enoteca-vinhos {
+        //width: 90vw;
+        height: 530px;
+
+        .enoteca-vinhos-text {
+          width: calc(100% - 9.6rem);
+          height: 100%;
+
+          padding: 4.8rem;
+
+          h1 {
+            font-size: 3.6rem;
+
+            margin-bottom: 3.6rem;
+          }
+
+          p {
+            font-size: 1.8rem;
+            line-height: 1.2;
+          }
+        }
+      }
+
+      .enoteca-harmonia {
+        gap: 10rem;
+
+        .harmonia-header {
+          gap: 2rem;
+
+          .harmonia-heading {
+            font-size: 3.6rem;
+          }
+          .harmonia-text {
+            font-size: 1.8rem;
+            line-height: 1.2;
+          }
+        }
+
+        .harmonia-items {
+          gap: 4rem;
+
+          .harmonia-item {
+            //width: 90vw;
+            height: 530px;
+
+            margin: 0 auto;
+
+            .harmonia-item-text {
+              width: calc(100% - 9.6rem);
+              height: 100%;
+
+              padding: 4.8rem;
+
+              h1 {
+                font-size: 3.6rem;
+
+                margin-bottom: 3.6rem;
+              }
+
+              p {
+                font-size: 1.8rem;
+                line-height: 1.2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 26em) {
+  .section-enoteca {
+    .enoteca-container {
+      gap: 4.8rem;
+      .enoteca-header {
+        height: 15vh;
+
+        span {
+          font-size: 3.2rem;
+        }
+      }
+
+      .enoteca-vinhos {
+        //width: 90vw;
+        height: 175px;
+
+        .enoteca-vinhos-text {
+          width: calc(100% - 2.4rem);
+          height: 100%;
+
+          padding: 1.2rem;
+
+          h1 {
+            font-size: 1.4rem;
+
+            margin-bottom: 1.4rem;
+          }
+
+          p {
+            font-size: 1rem;
+            line-height: 1;
+          }
+        }
+      }
+
+      .enoteca-harmonia {
+        gap: 5rem;
+
+        .harmonia-header {
+          gap: 1.4rem;
+
+          .harmonia-heading {
+            font-size: 3rem;
+          }
+          .harmonia-text {
+            font-size: 1.8rem;
+            line-height: 1.2;
+          }
+        }
+
+        .harmonia-items {
+          gap: 4rem;
+
+          .harmonia-item {
+            //width: 90vw;
+            height: 175px;
+
+            margin: 0 auto;
+
+            .harmonia-item-text {
+              width: calc(100% - 2.4rem);
+              height: 100%;
+
+              padding: 1.2rem;
+
+              h1 {
+                font-size: 1.4rem;
+
+                margin-bottom: 1.4rem;
+              }
+
+              p {
+                font-size: 1rem;
+                line-height: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

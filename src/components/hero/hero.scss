@@ -102,3 +102,82 @@
     }
   }
 }
+
+@media screen and (max-width: 84em) {
+  .hero-container {
+    height: 65vh;
+
+    .hero-text {
+      .hero-heading {
+        font-size: 6.4rem;
+        //line-height: 1.05;
+        //letter-spacing: -0.5px;
+      }
+
+      .hero-description {
+        font-size: 2rem;
+        //line-height: 1.2;
+        //letter-spacing: -0.5px;
+      }
+
+      .hero-link {
+        padding: 15px 32px;
+
+        span {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 34em) {
+  .hero-container {
+    height: 30vh;
+
+    .hero-text {
+      .hero-heading {
+        font-size: 4.6rem;
+        //line-height: 1.05;
+        //letter-spacing: -0.5px;
+      }
+
+      .hero-description {
+        font-size: 1.5rem;
+        margin-bottom: 2.2rem;
+      }
+
+      .hero-link {
+        padding: 15px 32px;
+
+        span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 26em) {
+  .hero-container {
+    height: 30vh;
+
+    .hero-text {
+      .hero-heading {
+        font-size: 3.2rem;
+      }
+
+      .hero-description {
+        font-size: 1.2rem;
+      }
+
+      .hero-link {
+        padding: 6px 16px;
+
+        span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

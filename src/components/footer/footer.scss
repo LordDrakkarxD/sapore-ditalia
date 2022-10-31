@@ -231,3 +231,197 @@
 
   //margin-top: auto;
 }
+
+@media screen and (max-width: 84em) {
+  .footer {
+    //padding: 2rem 0;
+
+    .footer-container {
+      -webkit-column-gap: 3rem;
+      -moz-column-gap: 3rem;
+      column-gap: 3rem;
+
+      max-width: 120rem;
+      padding: 0 3.2rem;
+
+      .logo-container {
+        .footer-logo {
+          margin-bottom: 1.6rem;
+
+          .logo {
+            height: 7.6rem;
+            width: 100%;
+          }
+        }
+
+        .social-links {
+          gap: 2.4rem;
+
+          .social-link {
+            font-size: 1.6rem;
+
+            .social-icon {
+              width: 2.2rem;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      .contact-container {
+        .footer-heading {
+          font-size: 1.6rem;
+          margin-bottom: 4rem;
+        }
+
+        .contact-info-heading {
+          font-size: 1.6rem;
+          line-height: 1.6;
+
+          .address-info {
+            margin-bottom: 2.4rem;
+          }
+
+          .contact-info {
+            font-size: 1.4rem;
+            .footer-link {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+
+      .nav-container {
+        .nav-heading {
+          font-size: 1.6rem;
+          margin-bottom: 4rem;
+        }
+
+        .footer-cards-nav {
+          display: -ms-grid;
+          display: grid;
+          -ms-grid-columns: 1fr 2.4rem 1fr 2.4rem 1fr 2.4rem 1fr;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 2.4rem;
+
+          .footer-card {
+            height: 2.4rem;
+            width: 100%;
+          }
+        }
+
+        .footer-nav {
+          gap: 2.4rem;
+
+          .footer-link {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 34em) {
+  .footer {
+    .footer-container {
+      -webkit-column-gap: 2.6rem;
+      -moz-column-gap: 2.6rem;
+      column-gap: 2.6rem;
+
+      max-width: 120rem;
+      padding: 0 2.4rem;
+
+      .logo-container {
+        .footer-logo {
+          margin-bottom: 1.6rem;
+
+          .logo {
+            height: 5.4rem;
+            width: 100%;
+          }
+        }
+
+        .social-links {
+          gap: 1.6rem;
+
+          .social-link {
+            font-size: 1.6rem;
+
+            .social-icon {
+              width: 1.8rem;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      .contact-container {
+        .footer-heading {
+          font-size: 1.2rem;
+          margin-bottom: 4rem;
+        }
+
+        .contact-info-heading {
+          font-size: 1.6rem;
+          line-height: 1.6;
+
+          .address-info {
+            margin-bottom: 2.4rem;
+          }
+
+          .contact-info {
+            font-size: 1rem;
+            .footer-link {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+
+      .nav-container {
+        .nav-heading {
+          font-size: 1.2rem;
+          margin-bottom: 4rem;
+        }
+
+        .footer-cards-nav {
+          display: -ms-grid;
+          display: grid;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -ms-grid-columns: 1fr 2rem 1fr;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+
+          .footer-card {
+            height: 3rem;
+
+            &.ifood {
+              height: 3rem;
+            }
+          }
+        }
+
+        .footer-nav {
+          gap: 1.4rem;
+
+          .footer-link {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}

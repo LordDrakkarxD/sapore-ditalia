@@ -302,3 +302,206 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 84em) {
+  .section-delivery {
+    .delivery-container {
+      .delivery-header {
+        height: 25vh;
+
+        span {
+          font-size: 4.6rem;
+        }
+      }
+
+      .delivery-entrega {
+        //width: 90vw;
+        height: 530px;
+
+        .delivery-entrega-image {
+          background-size: 100%;
+          background-position: bottom right 530px;
+        }
+
+        .delivery-entrega-text {
+          width: calc(100% - 9.6rem);
+          height: 100%;
+
+          padding: 4.8rem;
+
+          .ifood-button {
+            gap: 2rem;
+          }
+
+          .social-link {
+            font-size: 1.6rem;
+
+            .social-icon {
+              width: 3.6rem;
+              height: 100%;
+            }
+
+            &.ifood .social-icon {
+              width: 4.8rem;
+              height: 100%;
+            }
+          }
+
+          h1 {
+            font-size: 3.6rem;
+
+            margin-bottom: 3.6rem;
+          }
+
+          p {
+            font-size: 1.8rem;
+            line-height: 1.2;
+          }
+        }
+      }
+
+      .delivery-pratos {
+        gap: 10rem;
+
+        .delivery-items {
+          gap: 4rem;
+
+          .delivery-item {
+            //width: 90vw;
+            height: 530px;
+
+            .delivery-item-slider {
+              width: 50%;
+              height: 100%;
+
+              .slides {
+                //width: 100%;
+                height: 530px;
+              }
+            }
+
+            .delivery-item-text {
+              width: calc(100% - 9.6rem);
+              height: 100%;
+
+              padding: 4.8rem;
+
+              h1 {
+                font-size: 3.6rem;
+
+                margin-bottom: 3.6rem;
+              }
+
+              p {
+                font-size: 1.8rem;
+                line-height: 1.2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 26em) {
+  .section-delivery {
+    .delivery-container {
+      gap: 4.8rem;
+      .delivery-header {
+        height: 15vh;
+
+        span {
+          font-size: 3.2rem;
+        }
+      }
+
+      .delivery-entrega {
+        //width: 90vw;
+        height: 175px;
+
+        .delivery-entrega-image {
+          background-size: 100%;
+          background-position: center center;
+        }
+
+        .delivery-entrega-text {
+          width: calc(100% - 2.4rem);
+          height: 100%;
+
+          padding: 1.2rem;
+
+          .ifood-button {
+            gap: 2rem;
+          }
+
+          .social-link {
+            font-size: 1.6rem;
+
+            .social-icon {
+              width: 2rem;
+              height: 100%;
+            }
+
+            &.ifood .social-icon {
+              width: 3rem;
+              height: 100%;
+            }
+          }
+
+          h1 {
+            font-size: 1.4rem;
+
+            margin-bottom: 1.4rem;
+          }
+
+          p {
+            font-size: 1rem;
+            line-height: 1;
+          }
+        }
+      }
+
+      .delivery-pratos {
+        gap: 10rem;
+
+        .delivery-items {
+          gap: 4rem;
+
+          .delivery-item {
+            //width: 90vw;
+            height: 175px;
+
+            .delivery-item-slider {
+              width: 50%;
+              height: 100%;
+
+              .slides {
+                //width: 100%;
+                height: 175px;
+              }
+            }
+
+            .delivery-item-text {
+              width: calc(100% - 2.4rem);
+              height: 100%;
+
+              padding: 1.2rem;
+
+              h1 {
+                font-size: 1.4rem;
+
+                margin-bottom: 1.4rem;
+              }
+
+              p {
+                font-size: 1rem;
+                line-height: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

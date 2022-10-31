@@ -384,3 +384,153 @@
     }
   }
 }
+
+@media screen and (max-width: 84em) {
+  .section-contato {
+    .contato-container {
+      .contato-header {
+        height: 25vh;
+
+        span {
+          font-size: 4.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 26em) {
+  .section-contato {
+    //padding: 8.4rem 0;
+
+    gap: 4.8rem;
+    .contato-container {
+      .contato-header {
+        height: 15vh;
+
+        .contato-heading {
+          font-size: 3.2rem;
+        }
+
+        .contato-text {
+          font-size: 1.2rem;
+        }
+      }
+
+      .contact-info {
+        //width: 90vw;
+        height: 200px;
+
+        .contact-info-text {
+          width: calc(100% - 20rem);
+
+          padding: 1.2rem;
+
+          h1 {
+            font-size: 1.4rem;
+
+            margin-bottom: 1.4rem;
+          }
+
+          p {
+            font-size: 1rem;
+            line-height: 1;
+
+            .social-link {
+              gap: 1rem;
+
+              font-size: 1rem;
+
+              .social-icon {
+                height: 100%;
+                width: 1.2rem;
+              }
+
+              span {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .map-container {
+      //width: 90vw;
+      height: 200px;
+
+      .contact-info {
+        gap: 3rem;
+
+        width: calc(100% - 10rem);
+
+        padding: 5px;
+
+        label,
+        span {
+          font-size: 1.2rem;
+        }
+
+        h1 {
+          font-size: 1.2rem;
+
+          margin-bottom: 1.2rem;
+        }
+
+        .contact-form {
+          gap: 5px;
+
+          .email-name-form {
+            gap: 5px;
+
+            padding-bottom: 0px;
+          }
+
+          .message-form {
+            width: 100%;
+
+            padding-bottom: 0px;
+          }
+        }
+
+        .contact-info-title {
+          font-size: 3.2rem;
+        }
+
+        .contact-info-details {
+          gap: 2rem;
+
+          .contact-info-nome {
+            width: 50%;
+          }
+
+          .contact-info-email {
+            width: 50%;
+          }
+
+          input {
+            width: 100%;
+          }
+        }
+
+        .contact-info-assunto {
+          gap: 2rem;
+        }
+
+        .contact-info-mensagem {
+          gap: 2rem;
+
+          input {
+            height: 100px;
+          }
+        }
+
+        .contact-info-button {
+          button {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

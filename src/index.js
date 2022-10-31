@@ -12,7 +12,6 @@ import { WindowPopUpBuyProvider } from "./contexts/window-popup-buy";
 import reportWebVitals from "./reportWebVitals";
 
 import "./index.scss";
-import "./queries.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

@@ -54,3 +54,26 @@
     transition: 300ms ease all;
   }
 }
+
+@media screen and (max-width: 26em) {
+  .group {
+    .form-input {
+      font-size: 1px;
+
+      padding: 5px;
+
+      margin: 5px 0;
+    }
+
+    input[type="password"] {
+      letter-spacing: 0.3rem;
+    }
+
+    .form-input-label {
+      font-size: 1px;
+
+      left: 0px;
+      top: -5px;
+    }
+  }
+}

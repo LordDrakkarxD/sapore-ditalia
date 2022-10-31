@@ -94,3 +94,56 @@ a {
   min-height: 100%;
   margin: 0 auto;
 }
+
+/* rem and em do not depend on html fontsize in media queries!
+Instead, 1rem = 1em = 16px 
+
+/***********************************************/
+/* BELOW 1344px (Smaller desktops) */
+/***********************************************/
+
+@media screen and (max-width: 84em) {
+}
+
+/***********************************************/
+/* BELOW 1200px (Landscape Tablets) */
+/***********************************************/
+
+@media screen and (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+}
+
+/***********************************************/
+/* BELOW 944px (Tablets) */
+/***********************************************/
+
+@media screen and (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50%  */
+    font-size: 50%;
+  }
+}
+
+/***********************************************/
+/* BELOW 704px (Smaller Tablets) */
+/***********************************************/
+
+@media screen and (max-width: 44em) {
+}
+
+/***********************************************/
+/* BELOW 544px (Phones) */
+/***********************************************/
+
+@media screen and (max-width: 34em) {
+}
+
+@media screen and (max-width: 26em) {
+  html {
+    /* 8px / 16px = 0.5 = 50%  */
+    font-size: 35%;
+  }
+}

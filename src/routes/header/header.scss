@@ -68,11 +68,11 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 
     height: 12rem;
     width: 100vw;
@@ -82,13 +82,13 @@
 
     -webkit-box-shadow: 0 1.2rem 3.2rem rgb(0 0 0 / 3%);
 
-            box-shadow: 0 1.2rem 3.2rem rgb(0 0 0 / 3%);
+    box-shadow: 0 1.2rem 3.2rem rgb(0 0 0 / 3%);
 
     z-index: 9999;
 
     -webkit-animation: fadeIn 1.25s ease-in-out;
 
-            animation: fadeIn 1.25s ease-in-out;
+    animation: fadeIn 1.25s ease-in-out;
 
     //background-color: #fff;
     background-color: #712a04;
@@ -117,7 +117,7 @@
 
       -webkit-animation: moveDown 1.25s ease-in-out;
 
-              animation: moveDown 1.25s ease-in-out;
+      animation: moveDown 1.25s ease-in-out;
 
       .nav-bar-container {
         .nav-bar-link {
@@ -145,7 +145,7 @@
 
       .icon-mobile-nav[name="menu-outline"] {
         -webkit-animation: rollForward 1s;
-                animation: rollForward 1s;
+        animation: rollForward 1s;
         //transform: rotate(90deg);
         //display: none;
       }
@@ -177,66 +177,128 @@
     @-webkit-keyframes moveDown {
       from {
         -webkit-transform: translateY(-12rem);
-                transform: translateY(-12rem);
+        transform: translateY(-12rem);
       }
       to {
         -webkit-transform: translateY(0rem);
-                transform: translateY(0rem);
+        transform: translateY(0rem);
       }
     }
 
     @keyframes moveDown {
       from {
         -webkit-transform: translateY(-12rem);
-                transform: translateY(-12rem);
+        transform: translateY(-12rem);
       }
       to {
         -webkit-transform: translateY(0rem);
-                transform: translateY(0rem);
+        transform: translateY(0rem);
       }
     }
 
     @-webkit-keyframes rollForward {
       0% {
         -webkit-transform: rotate(0);
-                transform: rotate(0);
+        transform: rotate(0);
       }
       100% {
         -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
+        transform: rotate(360deg);
       }
     }
 
     @keyframes rollForward {
       0% {
         -webkit-transform: rotate(0);
-                transform: rotate(0);
+        transform: rotate(0);
       }
       100% {
         -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
+        transform: rotate(360deg);
       }
     }
 
     @-webkit-keyframes rollReverse {
       0% {
         -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
+        transform: rotate(360deg);
       }
       100% {
         -webkit-transform: rotate(0);
-                transform: rotate(0);
+        transform: rotate(0);
       }
     }
 
     @keyframes rollReverse {
       0% {
         -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
+        transform: rotate(360deg);
       }
       100% {
         -webkit-transform: rotate(0);
-                transform: rotate(0);
+        transform: rotate(0);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 84em) {
+  .section-header {
+    .header-falso {
+      &.sticky {
+        padding-top: 10rem;
+      }
+    }
+
+    .header-container {
+      height: 10rem;
+      padding: 0 6rem;
+
+      .header-logo-link {
+        margin-right: 4rem;
+
+        .header-logo {
+          height: 7.4rem;
+          width: 100%;
+        }
+      }
+
+      &.sticky {
+        height: 12rem;
+
+        .nav-bar-container {
+          .nav-bar-link {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 34em) {
+  .section-header {
+    .header-falso {
+      &.sticky {
+        padding-top: 10rem;
+      }
+    }
+
+    .header-container {
+      height: 8rem;
+      padding: 0 3.2rem;
+
+      .header-logo-link {
+        margin-right: 4rem;
+
+        .header-logo {
+          height: 5.4rem;
+          width: 100%;
+        }
+      }
+
+      &.sticky {
+        height: 8rem;
       }
     }
   }

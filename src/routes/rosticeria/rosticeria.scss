@@ -369,3 +369,210 @@
     }
   }
 }
+
+@media screen and (max-width: 84em) {
+  .section-rosticeria {
+    .rosticeria-container {
+      .rosticeria-header {
+        height: 25vh;
+
+        span {
+          font-size: 4.6rem;
+        }
+      }
+
+      .rosticeria-meals {
+        //width: 90vw;
+        height: 530px;
+
+        .rosticeria-meals-text {
+          width: calc(100% - 9.6rem);
+          height: 100%;
+
+          padding: 4.8rem;
+
+          h1 {
+            font-size: 2.8rem;
+
+            margin-bottom: 3.6rem;
+          }
+
+          p {
+            font-size: 1.6rem;
+            line-height: 1.2;
+          }
+        }
+      }
+
+      .rosticeria-dicas {
+        gap: 10rem;
+
+        .dicas-header {
+          gap: 2rem;
+
+          .dicas-heading {
+            font-size: 3.6rem;
+          }
+          .dicas-text {
+            font-size: 1.8rem;
+            line-height: 1.2;
+          }
+        }
+
+        .dicas-items {
+          gap: 4rem;
+
+          .dicas-item {
+            //width: 90vw;
+            height: 530px;
+
+            .dicas-item-text {
+              width: calc(100% - 9.6rem);
+              height: 100%;
+
+              padding: 4.8rem;
+
+              h1 {
+                font-size: 3.6rem;
+
+                margin-bottom: 3.6rem;
+              }
+
+              p {
+                font-size: 1.8rem;
+                line-height: 1.2;
+              }
+            }
+          }
+        }
+      }
+
+      .rosticeria-massas {
+        //width: 90vw;
+        height: 880px;
+
+        .rosticeria-massas-text {
+          width: calc(100% - 9.6rem);
+          height: 100%;
+          background-color: transparent;
+
+          padding: 4.8rem;
+
+          h1 {
+            font-size: 3.6rem;
+
+            margin-bottom: 3.6rem;
+          }
+
+          p {
+            font-size: 1.8rem;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 26em) {
+  .section-rosticeria {
+    .rosticeria-container {
+      gap: 4.8rem;
+      .rosticeria-header {
+        height: 15vh;
+
+        span {
+          font-size: 3.2rem;
+        }
+      }
+
+      .rosticeria-meals {
+        //width: 90vw;
+        height: 175px;
+
+        .rosticeria-meals-text {
+          width: calc(100% - 2.4rem);
+          height: 100%;
+
+          padding: 1.2rem;
+
+          h1 {
+            font-size: 1.4rem;
+
+            margin-bottom: 1.4rem;
+          }
+
+          p {
+            font-size: 1rem;
+            line-height: 1;
+          }
+        }
+      }
+
+      .rosticeria-dicas {
+        gap: 5rem;
+
+        .dicas-header {
+          gap: 1.4rem;
+
+          .dicas-heading {
+            font-size: 3.2rem;
+          }
+          .dicas-text {
+            font-size: 1.8rem;
+            line-height: 1.2;
+          }
+        }
+
+        .dicas-items {
+          gap: 4rem;
+
+          .dicas-item {
+            //width: 90vw;
+            height: 175px;
+
+            .dicas-item-text {
+              width: calc(100% - 2.4rem);
+              height: 100%;
+
+              padding: 1.2rem;
+
+              h1 {
+                font-size: 1.4rem;
+
+                margin-bottom: 1.4rem;
+              }
+
+              p {
+                font-size: 1rem;
+                line-height: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .rosticeria-massas {
+        height: 300px;
+
+        .rosticeria-massas-text {
+          width: calc(100% - 2.4rem);
+          background-color: transparent;
+
+          padding: 1.2rem;
+
+          h1 {
+            font-size: 1.4rem;
+
+            //margin-bottom: 1.4rem;
+          }
+
+          p {
+            font-size: 1rem;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+}
